@@ -1,0 +1,41 @@
+﻿table.x-kit-table{
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EDEDED;
+    border-top: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+table.x-kit-table > thead > tr {
+    border-collapse: separate;
+    border-spacing: 2px;
+    background-color: #efefef;
+}
+
+table.x-kit-table > thead > tr > th {
+    text-align: center;
+    line-height: 18px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    white-space: nowrap;
+    border-bottom-width: 2px;
+}
+
+table.x-kit-table > tbody > tr > td {
+    text-align: center;
+    line-height: 18px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border-color: #ccc;
+}
+
+table.x-kit-table > thead > tr > th, table.x-kit-table > tbody > tr > td {
+    border: 1px solid #ddd;
+}
+
+table.x-kit-table > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}

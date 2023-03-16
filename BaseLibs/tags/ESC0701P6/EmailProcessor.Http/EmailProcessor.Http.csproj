@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESC5.Email.Message\ESC5.Email.Message.csproj" />
+    <ProjectReference Include="..\HttpLibrary\HttpLibrary.csproj" />
+  </ItemGroup>
+
+</Project>

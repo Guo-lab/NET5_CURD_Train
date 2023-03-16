@@ -1,0 +1,86 @@
+﻿@model TaskEditVM
+@using (Html.KendoForm("c.frmEdit", "Save"))
+{
+    <div style="white-space: nowrap;">
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-save'" ng-click="c.Save_click()">
+                <span translate="Save"></span>
+            </kendo-button>
+        </div>
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-back'" ng-click="c.Back_click()">
+                <span translate="Back"></span>
+            </kendo-button>
+        </div>
+    </div>
+    @Html.NgHiddenFor(m => m.Input.Id)
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Code, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.Code)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Name, "e2-label")
+                </td>
+                <td>
+                    @Html.NgTextBoxFor(m => m.Input.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.User, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDropDownListFor(m => m.Input.User).DataSource("c.vm.UserList")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.MaxItemCount, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.MaxItemCount)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.CreateDate, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDatePickerFor(m => m.Input.CreateDate)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Score, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.Score)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Status, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDropDownListFor(m => m.Input.Status).Enum("Task_StatusEnum")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Active, "e2-label")
+                </td>
+                <td>
+                    @Html.NgCheckBoxFor(m => m.Input.Active)
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+}

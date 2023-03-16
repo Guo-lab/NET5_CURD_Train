@@ -1,0 +1,33 @@
+﻿@model Task_ListApprovedListVM
+@using (Html.KendoForm("c.frmSearch", "Search"))
+{
+    <div style="margin-top:5px;">
+        <table kendo-grid="c.grdTask" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+               pb-kendo-grid-cols="[
+            'Code',
+            'Name,T,80px',
+            'User,|Display',
+            'MaxItemCount',
+            'CreateDate,|Display',
+            'Score',
+            'Status,|Display:\'Task_StatusEnum\'',
+            'Active,|Display',
+        ]" pb-kendo-grid-options="{toolbarTpl:false}" class="myTable">
+            <thead>
+                <tr>
+                    <th class="tableth"><span translate="Task_Code"></span></th>
+                    <th class="tableth"><span translate="Task_Name"></span></th>
+                    <th class="tableth"><span translate="Task_User"></span></th>
+                    <th class="tableth"><span translate="Task_MaxItemCount"></span></th>
+                    <th class="tableth"><span translate="Task_CreateDate"></span></th>
+                    <th class="tableth"><span translate="Task_Score"></span></th>
+                    <th class="tableth"><span translate="Task_Status"></span></th>
+                    <th class="tableth"><span translate="Task_Active"></span></th>
+                </tr>
+            </thead>
+        </table>
+        <script Id="Name-template" type="text/x-kendo-template">
+                    <a class="a-link" @Url.State("forward:Edit(id:#=Id#)")>#=Name#</a>
+        </script>
+    </div>
+}

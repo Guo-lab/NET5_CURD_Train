@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ESC5.OfflineServiceBase\\ESC5.OfflineServiceBase.csproj": {}
+  },
+  "projects": {
+    "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ESC5.OfflineServiceBase\\ESC5.OfflineServiceBase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ESC5.OfflineServiceBase\\ESC5.OfflineServiceBase.csproj",
+        "projectName": "ESC5.OfflineServiceBase",
+        "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ESC5.OfflineServiceBase\\ESC5.OfflineServiceBase.csproj",
+        "packagesPath": "C:\\Users\\Gsq\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ESC5.OfflineServiceBase\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gsq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "CoreRemoting": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            },
+            "MassTransit.Log4Net": {
+              "target": "Package",
+              "version": "[5.5.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Topshelf": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Topshelf.Log4Net": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

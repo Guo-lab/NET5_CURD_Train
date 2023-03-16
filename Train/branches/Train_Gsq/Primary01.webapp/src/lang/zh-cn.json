@@ -1,0 +1,19 @@
+{
+    "Error": {
+        "ExceptionName": "翻译",
+        "InventoryQtyLessZeroException": "库存数量小于0"
+    },
+    "V": {
+        "equalto_User_ConfirmPassword": "两次输入的新密码必须相同",
+        "pattern": "格式不匹配${pattern}",
+        "pattern_Task_Name": "名称格式不匹配，应该是${pattern}"
+    },
+    "pbDict": {
+        "Task_StatusEnum": {
+            "Auto": "自动",
+            "Done": "完成",
+            "Close": "关闭",
+            "Cancel": "取消"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@model UserListVM
+@using (Html.KendoForm("c.frmSearch", "Search"))
+{
+    <div class="row">
+        <div class="clearfix">
+            <div class="e2-col-lg-3 e2-col-md-3 e2-col-sm-3 e2-col-xs-3">
+                @Html.NgLabelFor(m => m.Input.Name)
+                @Html.KendoTextBoxFor(m => m.Input.Name)
+            </div>
+            <div class="e2-col-lg-2 e2-col-md-8 e2-col-sm-8 e2-col-xs-8">
+                <kendo-button type="button" ng-click="c.Search_click()" icon="'k-icon k-i-search'">
+                    <span translate="Search"></span>
+                </kendo-button>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:5px;">
+        <table kendo-grid="c.grdUser" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm" 
+               pb-kendo-grid-cols="[
+        'Code',
+        'Name,T,80px|{style: \'text-align: center;background-color:red\'}',
+        'Age',
+        'BirthDate,|Display',
+        'Salary',
+        'Rank,|Display:\'User_RankEnum\'',
+        'Active,|Display',
+        ',OT',
+        { field: '', width: '200px', attributes: { style: 'text-align: center' }, template: 'OT' }
+    ]"  class="myTable">
+            <thead>
+                <tr>
+                    <th class="tableth"><span translate="User_Code"></span></th>
+                    <th class="tableth"><span translate="User_Name"></span></th>
+                    <th class="tableth"><span translate="User_Age"></span></th>
+                    <th class="tableth"><span translate="User_BirthDate"></span></th>
+                    <th class="tableth"><span translate="User_Salary"></span></th>
+                    <th class="tableth"><span translate="User_Rank"></span></th>
+                    <th class="tableth"><span translate="User_Active"></span></th>
+                    <th class="tableth"></th>
+                    <th class="tableth"></th>
+                </tr>
+            </thead>
+        </table>
+        <script Id="Toolbar-template" type="text/x-kendo-template">
+                <kendo-button @Url.State("forward:Add") icon="'k-icon k-i-add'" type="button">
+                    <span translate="Add"></span>
+                </kendo-button>
+        </script>
+        <script Id="Name-template" type="text/x-kendo-template">
+                <a class="a-link" @Url.State("forward:Edit(Id:#=Id#)")>#=Name#</a>
+        </script>
+        <script Id="Operation-template" type="text/x-kendo-template">
+            <kendo-button type="button" icon="'k-icon k-i-delete'" ng-click="c.Delete_click(#=Id#,'#=Name#')"><span translate="Delete"></span></kendo-button>
+        </script>
+    </div>
+}

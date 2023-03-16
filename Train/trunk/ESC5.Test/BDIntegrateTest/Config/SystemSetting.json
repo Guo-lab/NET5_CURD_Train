@@ -1,0 +1,76 @@
+{
+  "General": {
+    "PurchasingCode": "PUR",
+    "LocalCurrency": "RMB",
+    "MaxCommodityLevel": 3,
+    "WorkingTimeFrom": "8:30",
+    "WorkingTimeTo": "17:00",
+    "RestTimeFrom": "12:00",
+    "RestTimeTo": "13:00",
+    "CycleTimeMode": "WorkingDay",
+    "UnitPriceScale": 4,
+    "AmountScale": 2,
+    "QuantityScale": 3
+  },
+  "PR": {
+    "AutoSubmitImportedPR": true,
+    "AutoFindBuyerMode": "ManualAssign",
+    "AssignMode": "OneLevelDown",
+    "StandardProcessCycleTime1": 5,
+    "StandardProcessCycleTime2": 10,
+    "StandardProcessCycleTime3": 15,
+    "StandardProcessCycleTime4": 20,
+    "CalcBuyerPerformanceOn": "OnSubmit"
+  },
+  "QR": {
+    "VendorQuoteInTimeDays": 3,
+    "Quoteby": "NetPrice"
+  },
+  "PO": {
+    "QuotationSelectionMode": "ByPart",
+    "ExceedPRQuantity": false,
+    "QuotEffectiveAhead_PO": 0,
+    "QuotEffectiveAhead_BO": 15,
+    "PaymentPlanGenerateOn": "OnSubmit",
+    "WriteoffEnabled": true,
+    "PORiskEnabled": true,
+    "PaymentPlanConfirmationEnabled": true,
+    "VersionControl": {
+      "Enabled": true,
+      "KeyFields": {
+        "PO": [
+          "CapitalExpense",
+          "CARNo",
+          "CCN",
+          "Currency.CurrencyCode~CurrencyCode",
+          "PaymentTerm.PaymentTermCode~PaymentTermCode",
+          "TradingTerm.TradingTermCode~TradingTermCode",
+          "PaymentMode.PaymentModeCode~PaymentModeCode",
+          "PaymentPlanType",
+          "NeedSettlement"
+        ],
+        "POItem": [
+          "Unit.UnitCode~UnitCode",
+          "UnitPrice",
+          "TaxRate.TaxRateCode~TaxRateCode",
+          "Quantity"
+        ],
+        "PaymentPlan": [
+          "AmountVAT",
+          "PlannedPaymentDate",
+          "PaymentCondition"
+        ]
+      }
+    }
+  },
+  "Finance": {
+    "PaymentPlanConfirmationRequired": false,
+    "PaymentRequestGenerateOn": "OnInboundAll"
+  },
+  "Inspection": {
+    "GRInspectionEnabled": true,
+    "PickingInspectionEnabled": false,
+    "ProcessInspectionEnabled": false,
+    "TaskAssignMode": "Picking"
+  }
+}

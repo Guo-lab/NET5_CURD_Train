@@ -1,0 +1,115 @@
+﻿.login_backgroud_layer {
+    width: 100%;
+    background: url(../images/backgroud.png) repeat;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+}
+.login_backgroud {
+    background: url(../images/LoginBack.jpg) no-repeat;
+    height: 311px;
+    width: 514px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-height: 310px)
+{
+    .login_backgroud{
+        margin-top:0px;
+    }
+}
+
+@media screen and (min-height: 311px)  and (max-height: 410px)
+{
+    .login_backgroud{
+        margin-top:60px;
+    }
+}
+
+@media screen and (min-height: 411px) and (max-height: 580px)
+{
+    .login_backgroud{
+       margin-top:130px;
+    }
+}
+
+@media screen and (min-height: 581px) and  (max-height: 680px)
+{
+    .login_backgroud{
+       margin-top:180px;
+    }
+}
+
+@media screen and (min-height: 681px) and (max-height: 800px)
+{
+    .login_backgroud{
+       margin-top:240px;
+    }
+}
+
+
+@media screen and (max-height: 309px)
+{
+    .login_backgroud_layer{
+        height:310px;
+    }
+}
+
+@media screen and (max-height: 400px)
+{
+    .login_backgroud_layer{
+        height:400px;
+    }
+}
+
+@media screen and (max-height: 500px)
+{
+    .login_backgroud_layer{
+        height:500px;
+    }
+}
+
+@media screen and (max-height: 600px)
+{
+    .login_backgroud_layer{
+        height:600px;
+    }
+}
+
+@media screen and (max-height: 700px)
+{
+    .login_backgroud_layer{
+        height:700px;
+    }
+}
+
+@media screen and (max-height: 800px)
+{
+    .login_backgroud_layer{
+        height:800px;
+    }
+}
+
+@media screen and (max-device-height: 1000px)
+{
+    .login_backgroud_layer{
+        height:1000px;
+    }
+}
+
+@media screen and (max-device-height: 1200px)
+{
+    .login_backgroud_layer{
+        height:1200px;
+    }
+}
+
+@media screen and (min-device-height: 1201px)
+{
+    .login_backgroud_layer{
+        height:1300px;
+    }
+}

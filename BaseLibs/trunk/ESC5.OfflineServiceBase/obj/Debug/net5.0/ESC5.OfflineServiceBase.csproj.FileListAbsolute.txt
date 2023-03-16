@@ -1,0 +1,12 @@
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\bin\Debug\net5.0\ESC5.OfflineServiceBase.deps.json
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\bin\Debug\net5.0\ESC5.OfflineServiceBase.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\bin\Debug\net5.0\ESC5.OfflineServiceBase.pdb
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.csproj.AssemblyReference.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.AssemblyInfoInputs.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.AssemblyInfo.cs
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.csproj.CoreCompileInputs.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ESC5.OfflineServiceBase.pdb
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\obj\Debug\net5.0\ref\ESC5.OfflineServiceBase.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ESC5.OfflineServiceBase\bin\Debug\net5.0\ref\ESC5.OfflineServiceBase.dll

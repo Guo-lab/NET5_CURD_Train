@@ -1,0 +1,28 @@
+﻿  /*搜索项*/
+  .myTable td {
+        padding: .1em .1em .1em .3em;
+        overflow: hidden;
+        line-height: 1.6em;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+       word-break:keep-all;
+    }
+    /*搜索项*/
+    /*物料弹窗*/
+    .togelleTable {
+            border-style: solid;
+            border-width: 0 0 0 1px;
+            padding: .4em .6em;
+            overflow: hidden;
+            line-height: 1.6em;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+    }
+    /*物料弹窗*/
+   .right {
+    text-align:right;
+    }
+    .center {
+    text-align:center;
+    }

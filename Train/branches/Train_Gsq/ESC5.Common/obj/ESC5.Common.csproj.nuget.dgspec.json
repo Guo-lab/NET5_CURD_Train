@@ -1,0 +1,228 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Common\\ESC5.Common.csproj": {}
+  },
+  "projects": {
+    "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj",
+        "projectName": "ProjectBase",
+        "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj",
+        "packagesPath": "C:\\Users\\Gsq\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gsq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "Castle.Windsor.MsDependencyInjection": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp": {
+              "target": "Package",
+              "version": "[3.10.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.3.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.10, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Common\\ESC5.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Common\\ESC5.Common.csproj",
+        "projectName": "ESC5.Common",
+        "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Common\\ESC5.Common.csproj",
+        "packagesPath": "C:\\Users\\Gsq\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gsq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj": {
+                "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj"
+              },
+              "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Domain\\ESC5.Domain.csproj": {
+                "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Domain\\ESC5.Domain.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Domain\\ESC5.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Domain\\ESC5.Domain.csproj",
+        "projectName": "ESC5.Domain",
+        "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Domain\\ESC5.Domain.csproj",
+        "packagesPath": "C:\\Users\\Gsq\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Train\\branches\\Train_Gsq\\ESC5.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gsq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj": {
+                "projectPath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ProjectBase\\ProjectBase.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

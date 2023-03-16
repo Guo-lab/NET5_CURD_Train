@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseLibs\ESC5.WebCommon\ESC5.WebCommon.csproj" />
+    <ProjectReference Include="..\BaseLibs\KendoUIHelper\KendoUIHelper.csproj" />
+    <ProjectReference Include="..\BaseLibs\ProjectBase\ProjectBase.csproj" />
+    <ProjectReference Include="..\ESC5.Common\ESC5.Common.csproj" />
+    <ProjectReference Include="..\ESC5.Web.Mvc\ESC5.Web.Mvc.csproj" />
+  </ItemGroup>
+
+</Project>

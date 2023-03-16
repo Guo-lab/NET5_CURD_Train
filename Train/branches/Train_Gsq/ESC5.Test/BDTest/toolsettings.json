@@ -1,0 +1,4 @@
+{
+  "ConnectionString": "Data Source=.;Database=Train_Rainy;User ID=sa;Password=rainy",
+  "ToolOutputFolder": "D:\\Train\\Primary01\\trunk\\ESC5.Test\\BDTest\\ToolOutput"
+}

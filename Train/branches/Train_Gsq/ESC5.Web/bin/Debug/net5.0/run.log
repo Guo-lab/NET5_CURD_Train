@@ -1,0 +1,88 @@
+2023-03-16 14:26:12,648 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - NHibernate 5.3.8+96a9af7a83ee697eb1f62a915f8da80a8eaca197 (assembly 5.3.0.0)
+
+2023-03-16 14:26:12,718 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - hibernate-configuration section not found in application configuration file
+
+2023-03-16 14:26:12,723 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Bytecode provider name : lcg
+
+2023-03-16 14:26:12,726 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Objects factory class : NHibernate.Bytecode.ActivatorObjectsFactory
+
+2023-03-16 14:26:12,728 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using reflection optimizer
+
+2023-03-16 14:26:13,010 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Task -> TR_Task
+
+2023-03-16 14:26:13,053 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.TaskItem -> TR_TaskItem
+
+2023-03-16 14:26:13,057 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.User -> TR_User
+
+2023-03-16 14:26:13,067 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+
+2023-03-16 14:26:13,087 [1] INFO NHibernate.Log4NetLogger.Info(:0) - checking mappings queue
+
+2023-03-16 14:26:13,089 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-many association mappings
+
+2023-03-16 14:26:13,096 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - mapping collection: ESC5.Domain.DomainModel.TR.Task.TaskItems -> TR_TaskItem
+
+2023-03-16 14:26:13,103 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-one association property references
+
+2023-03-16 14:26:13,106 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing foreign key constraints
+
+2023-03-16 14:26:13,117 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing filters (second pass)
+
+2023-03-16 14:26:13,128 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+
+2023-03-16 14:26:13,144 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+
+2023-03-16 14:26:13,154 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+
+2023-03-16 14:26:13,179 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+
+2023-03-16 14:26:13,243 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using dialect defined converter
+
+2023-03-16 14:26:13,246 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Generate SQL with comments: disabled
+
+2023-03-16 14:26:13,249 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+
+2023-03-16 14:26:13,252 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Configuring ConnectionProvider
+
+2023-03-16 14:26:13,256 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+
+2023-03-16 14:26:13,258 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
+
+2023-03-16 14:26:13,262 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Optimize cache for minimal puts: False
+
+2023-03-16 14:26:13,264 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Connection release mode: auto
+
+2023-03-16 14:26:13,266 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default schema: ESC5.dbo
+
+2023-03-16 14:26:13,268 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default batch fetch size: 1
+
+2023-03-16 14:26:13,270 [1] INFO NHibernate.Log4NetLogger.Info(:0) - echoing all SQL to stdout
+
+2023-03-16 14:26:13,272 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Statistics: disabled
+
+2023-03-16 14:26:13,273 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Deleted entity synthetic identifier rollback: disabled
+
+2023-03-16 14:26:13,276 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+
+2023-03-16 14:26:13,279 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query provider: NHibernate.Linq.DefaultQueryProvider
+
+2023-03-16 14:26:13,283 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query language substitutions: {'true'='1', 'false'='0'}
+
+2023-03-16 14:26:13,286 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+
+2023-03-16 14:26:13,288 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL inserts for batching: enabled
+
+2023-03-16 14:26:13,291 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL updates for batching: disabled
+
+2023-03-16 14:26:13,294 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Batcher factory: NHibernate.AdoNet.GenericBatchingBatcherFactory, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+
+2023-03-16 14:26:13,297 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using Isolation Level: ReadCommitted
+
+2023-03-16 14:26:13,300 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default flush mode: Auto
+
+2023-03-16 14:26:13,303 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Named query checking : enabled
+
+2023-03-16 14:26:13,326 [1] INFO NHibernate.Log4NetLogger.Info(:0) - building session factory
+
+2023-03-16 14:26:13,689 [1] INFO NHibernate.Log4NetLogger.Info(:0) - no name configured
+

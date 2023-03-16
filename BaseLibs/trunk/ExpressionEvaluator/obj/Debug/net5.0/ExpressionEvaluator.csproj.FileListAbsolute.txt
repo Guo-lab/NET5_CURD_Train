@@ -1,0 +1,12 @@
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\bin\Debug\net5.0\ExpressionEvaluator.deps.json
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\bin\Debug\net5.0\ExpressionEvaluator.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\bin\Debug\net5.0\ExpressionEvaluator.pdb
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.csproj.AssemblyReference.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.AssemblyInfoInputs.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.AssemblyInfo.cs
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.csproj.CoreCompileInputs.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ExpressionEvaluator.pdb
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\obj\Debug\net5.0\ref\ExpressionEvaluator.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\ExpressionEvaluator\bin\Debug\net5.0\ref\ExpressionEvaluator.dll

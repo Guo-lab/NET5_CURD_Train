@@ -1,0 +1,9 @@
+﻿[
+  {
+    "CustomerCode": "2006",
+    "Sender": "webmaster@e2biz.com.cn",
+    "SMTPServer": "smtp.e2biz.com.cn",
+    "SMTPUID": "webmaster@e2biz.com.cn",
+    "SMTPPWD": "e2bizkeyring"
+  }
+]

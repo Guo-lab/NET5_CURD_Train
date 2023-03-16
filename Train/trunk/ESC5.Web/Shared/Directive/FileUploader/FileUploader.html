@@ -1,0 +1,37 @@
+﻿<div style="width:100%;text-align:initial">
+    <div class="file-uploader-button">
+        <input type="file" class="file-uploader-file" ng-disabled="readOnly=='true' || (multiple=='false' && files.length>0)"/>
+        <div style="padding-left:10px;padding-right:20px;text-align:left" ng-transclude="Title">
+            <i class="fa fa-upload"></i>&nbsp;附件
+        </div>
+        <div style="position: absolute; right:0;top:0px;vertical-align:top" ng-show="{{showBadge}}">
+            <span class="badge badge-success" style="background-color:forestgreen;" ng-if="files.length>0" ng-click="showList()">{{files.length}}</span>
+        </div>
+    </div>
+    <div ng-transclude="Result">
+        <div class="file-uploader-layer file-uploader-layer-page file-uploader-layer-anim file-uploader-result">
+            <div class="file-uploader-layer-title" style="cursor: move;">
+                上传文件
+                <button  ng-click="closeList()" style="position:absolute;right:15px;margin-top:10px;font-size:15px" 
+                        icon="'k-icon k-i-close'" type="button" data-role="button" class="k-button k-button-icon">
+                    <span class="k-icon k-i-k-icon k-i-close"></span>
+                </button>
+            </div>
+            <div class="file-uploader-layer-content">
+                <div ng-repeat="file in files" style="margin-top: 20px;border-bottom-color: antiquewhite;border-bottom-style: double;">
+                    <div ng-if="file.url" class="row" style="vertical-align:bottom;">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:left;"><a ng-href="{{file.url}}"><div style="white-space:nowrap; text-overflow:ellipsis;overflow:hidden;">{{file.OriginalFileName}}</div></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:right;">{{file.size}}</div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2" style="text-align:right">
+                            <a ng-click="remove(file)" ng-if="readOnly=='false'"><span class="k-icon k-i-k-icon k-i-delete" title="删除" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="file-uploader-layer-setwin">
+                <a class="file-uploader-layer-ico file-uploader-layer-close file-uploader-layer-close1" href="javascript:;"></a>
+            </span>
+            <div class="file-uploader-layer-btn file-uploader-layer-btn-c"><a class="file-uploader-layer-btn0" ng-click="clear()" ng-if="readOnly=='false'">清除全部</a></div>
+        </div>
+    </div>
+</div>

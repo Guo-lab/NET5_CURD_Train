@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# SA1600: Elements should be documented
+dotnet_diagnostic.SA1600.severity = none
+
+# E2biz0001: ForView
+dotnet_diagnostic.E2biz0001.severity = none

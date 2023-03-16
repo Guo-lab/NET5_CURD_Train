@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "TR55hBE484/5Q/jBJFjHYeUr+Dihb24cRVsWWQ2Ec5vqSyyqm72rR62alag+70+emqyxTceZB32jfeDu9rAAgQ==",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\Logger\\Logger.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gsq\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

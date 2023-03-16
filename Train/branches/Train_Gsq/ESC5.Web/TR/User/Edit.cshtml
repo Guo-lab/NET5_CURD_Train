@@ -1,0 +1,78 @@
+﻿@model UserEditVM
+@using (Html.KendoForm("c.frmEdit", "Save"))
+{
+    <div style="white-space: nowrap;">
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-save'" ng-click="c.Save_click()">
+                <span translate="Save"></span>
+            </kendo-button>
+        </div>
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-back'" ng-click="c.Back_click()">
+                <span translate="Back"></span>
+            </kendo-button>
+        </div>
+    </div>
+    @Html.NgHiddenFor(m => m.Input.Id)
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Code, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.Code)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Name, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Age, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.Age)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.BirthDate, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDatePickerFor(m => m.Input.BirthDate)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Salary, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.Salary)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Rank, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDropDownListFor(m => m.Input.Rank).Enum("User_RankEnum").OptionLabel()
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Active, "e2-label")
+                </td>
+                <td>
+                    @Html.NgCheckBoxFor(m => m.Input.Active)
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+}

@@ -1,0 +1,60 @@
+@model TaskListVM
+@using (Html.KendoForm("c.frmSearch", "Search"))
+    {
+        <div class="row">
+            <div class="clearfix">
+                <div class="e2-col-lg-3 e2-col-md-3 e2-col-sm-3 e2-col-xs-3">
+                    @Html.NgLabelFor(m => m.Input.Name)
+                    @Html.KendoTextBoxFor(m => m.Input.Name)
+                </div>
+                <div class="e2-col-lg-3 e2-col-md-3 e2-col-sm-3 e2-col-xs-3">
+                    @Html.NgLabelFor(m => m.Input.User)
+                    @Html.KendoDropDownListFor(m => m.Input.User).DataSource("c.vm.UserList").OptionLabel()
+                </div>
+                <div class="e2-col-lg-2 e2-col-md-8 e2-col-sm-8 e2-col-xs-8">
+                    <kendo-button type="button" ng-click="c.Search_click()" icon="'k-icon k-i-search'">
+                        <span translate="Search"></span>
+                    </kendo-button>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:5px;">
+            <table kendo-grid="c.grdTask" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+                   pb-kendo-grid-cols="[
+            'Code',
+            'Name,T,40px|left',
+            'User,|Display',
+            'MaxItemCount,,right',
+            'CreateDate,|Display',
+            'Score,|Display:2',
+            'Status,|Display:\'Task_StatusEnum\'',
+            'Active,|Display',
+            ',OT'
+        ]" pb-kendo-grid-options="{toolbarTpl:'MyToolbar-tpl'}" class="myTable">
+                <thead>
+                    <tr>
+                        <th class="tableth"><span translate="Task_Code"></span></th>
+                        <th class="tableth" wrap><span translate="Task_Name"></span></th>
+                        <th class="tableth"><span translate="Task_User"></span></th>
+                        <th class="tableth"><span translate="Task_MaxItemCount"></span></th>
+                        <th class="tableth"><span translate="Task_CreateDate"></span></th>
+                        <th class="tableth"><span translate="Task_Score"></span></th>
+                        <th class="tableth"><span translate="Task_Status"></span></th>
+                        <th class="tableth"><span translate="Task_Active"></span></th>
+                        <th class="tableth"></th>
+                    </tr>
+                </thead>
+            </table>
+            <script Id="MyToolbar-tpl" type="text/x-kendo-template">
+                    <kendo-button @Url.State("forward:Add") icon="'k-icon k-i-add'" type="button">
+                        <span translate="Add"></span>
+                    </kendo-button>
+            </script>
+            <script Id="Name-template" type="text/x-kendo-template">
+                    <a class="a-link" @Url.State("forward:Edit(Id:#=Id#)")>#=Name#</a>
+            </script>
+            <script Id="Operation-template" type="text/x-kendo-template">
+                <kendo-button type="button" icon="'k-icon k-i-delete'" ng-click="c.Delete_click(#=Id#,'#=Name#')"><span translate="Delete"></span></kendo-button>
+            </script>
+        </div>
+    }

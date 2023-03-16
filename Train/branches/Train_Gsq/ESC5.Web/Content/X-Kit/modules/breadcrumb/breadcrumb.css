@@ -1,0 +1,43 @@
+﻿.x-kit-breadcrumb{
+    float: right;
+    padding-right: 30px;
+}
+
+.x-kit-breadcrumb > ul{
+    padding: 8px 15px;
+    margin-bottom: 18px;
+    list-style: none;
+    border-radius: 0px;
+}
+
+.x-kit-breadcrumb > ul > li {
+    display: inline-block;
+    color: #979898;
+    font-size:13px;
+}
+
+.x-kit-breadcrumb > ul > li > a{
+    color: #979898;
+    font-size:13px;
+}
+
+.x-kit-breadcrumb > ul > li:last-child {
+    color: #646565;
+    font-weight: bold;
+}
+
+.x-kit-breadcrumb > ul > li:first-child:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f015";
+    padding: 0 5px;
+}
+
+.x-kit-breadcrumb > ul > li + li:before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #cccccc;
+}

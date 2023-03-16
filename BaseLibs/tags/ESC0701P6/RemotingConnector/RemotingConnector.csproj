@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MessageSender\**" />
+    <EmbeddedResource Remove="MessageSender\**" />
+    <None Remove="MessageSender\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="IEmailEvent.cs" />
+    <Compile Remove="IJobEvent.cs" />
+    <Compile Remove="RemotingEmail.cs" />
+    <Compile Remove="RemotingJob.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreRemoting" Version="1.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectBase\ProjectBase.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,68 @@
+﻿input[type="text"].x-kit-form-control {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius: 0px;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+input[type="text"].x-kit-form-control-size-lg{
+    height:40px;
+    padding: 6px 12px;
+    font-size:15px;
+}
+
+input[type="text"].x-kit-form-control-size-md{
+    height:30px;
+    padding: 5px 10px;
+    font-size:14px;
+}
+input[type="text"].x-kit-form-control-size-sm{
+    height:20px;
+    padding: 4px 8px;
+    font-size:12px;
+}
+input[type="text"].x-kit-form-control-size-xs{
+    height:15px;
+    padding: 2px 6px;
+    font-size:12px;
+}
+
+input[type="text"].x-kit-form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"].x-kit-form-control:focus, .x-kit-form-control:active {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+input[type="text"].x-kit-form-control:focus {
+    border-color: rgba(104, 184, 40, 0.5);
+}
+
+input[type="checkbox"].x-kit-form-control {
+    border-radius:0px;
+    height:20px;
+    background-color: white;
+}

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESC5.Job.Message\ESC5.Job.Message.csproj" />
+    <ProjectReference Include="..\ExpressionEvaluator\ExpressionEvaluator.csproj" />
+    <ProjectReference Include="..\IdentityService\IdentityService.csproj" />
+  </ItemGroup>
+
+</Project>

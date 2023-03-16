@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>欢迎进入易拓必盛eSupplyChain系统</title>
+    <link href="~/Content/css/bootstrap.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-e2biz.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/css/Site.css?v=1.0" rel="stylesheet" />
+    @*<link rel="stylesheet" href="~/Content/Font-awesome/css/font-awesome.css" />*@
+    <link rel="stylesheet" href="~/Shared/Directive/FileUploader/FileUploader.css?v=1.0">
+    <link rel="stylesheet" href="~/Content/css/custom.css?v=1.0" />
+    <script src="~/Scripts/libs/jquery.min.js"></script>
+    <script src="~/Scripts/libs/angular.min.js"></script>
+    <script src="~/Scripts/lang/angular-locale_zh-cn.js"></script>
+    <script src="~/Scripts/libs/angular-animate.min.js"></script>
+    <script src="~/Scripts/libs/angular-cookies.min.js"></script>
+    <script src="~/Scripts/libs/angular-translate.min.js"></script>
+    <script src="~/Scripts/libs/angular-translate-loader-static-files.min.js"></script>
+    <script src="~/Scripts/libs/angular-translate-storage-cookie.min.js"></script>
+    <script src="~/Scripts/libs/angular-translate-storage-local.min.js"></script>
+    <script src="~/Scripts/libs/angular-ui-router.min.js"></script>
+    <script src="~/Scripts/libs/jcs-auto-validate.js"></script>
+    <script src="~/Scripts/libs/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script src="~/Scripts/libs/md5-min.js"></script>
+    <script src="~/Scripts/libs/numeral.min.js"></script>
+    <script src="~/Scripts/libs/JSON.js"></script>
+    <script src="~/Scripts/framework.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_Common.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_BaseCtrl.js"></script>
+    <script src="~/Scripts/ProjectBase/Validators.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_StateDefiner.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_Ajax.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_UI.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_Kendo.js"></script>
+    <script src="~/Scripts/ProjectBase/ProjectBase_Kendo2.js"></script>
+    <script src="~/Scripts/lang/dict.js?v=1.24"></script>
+    <script src="~/Scripts/App_Main.js?v=3.061"></script>
+    <script src="~/Scripts/App_Menu.js?v=3.061"></script>
+    <script src="~/Scripts/ProjectBase/App_AutoValidator.js?v=3.061"></script>
+    <script src="~/Scripts/ProjectBase/App_PbPlugin.js?v=3.061"></script>
+    <script src="~/Common/NgControllerJs"></script>
+
+    <link href="~/Content/X-Kit/x-kit.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/breadcrumb/breadcrumb.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/button/button.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/container/container.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/dropdown/dropdown.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/form-control/form-control.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/table/table.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/X-Kit/modules/responsive/responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/HomeIndex.css?v=1.1" rel="stylesheet" />
+
+    <script src="~/Content/X-Kit/modules/toggle/toggle.js"></script>
+    <script src="~/Scripts/libs/jszip.min.js"></script>
+    <script src="~/Scripts/libs/kendo.all.min.js"></script>
+    <script src="~/Scripts/libs/kendo_zh-CN.js"></script>
+    <script src="~/Scripts/libs/kendo_culture_zh-CN.js"></script>
+    <link href="~/Content/Kendo/kendo.common.min.css?v=1.0" rel="stylesheet" />
+    <link href="~/Content/Kendo/kendo.default.min.css?v=1.0" rel="stylesheet" />
+    <script>
+                        //make sure this be the last-loaded script
+                        //def.RegisterImplicitControllers();
+    </script>
+    <style>
+        a {
+            display: block !important;
+        }
+
+        button {
+            display: block !important;
+        }
+    </style>
+</head>
+<body ng-controller="BaseCtrl as baseCtrl" id="theBody">
+    @Model
+    <div class="main-center">
+        <a @Url.State("root:/TR/User/List")>点我进入User清单页面</a>
+        <a @Url.State("root:/TR/Task_Info/List")>点我进入Task_Info/List页面,DORef使用</a>
+        <a @Url.State("root:/TR/Task_List/ListByDate")>点我进入ListByDate页面，缺省查询条件</a>
+        <a @Url.State("root:/TR/Task_List/ApprovedList")>点我进入ApprovedList页面，固定查询条件</a>
+        <a @Url.State("root:/TR/Task_Info/MultiEdit")>点我进入多行编辑页面</a>
+        <a @Url.State("root:/TR/Task_Info/SectionedInfo(Id:1)")>点我进入SectionedInfo页面</a>
+        <div class="centre-right">
+            <div Id="divMainContentView" style="height:100% !important" ui-view></div>
+        </div>
+    </div>
+
+    <div class="main-foot">
+        <pb-processing-mask targetid="divMainContentView"></pb-processing-mask>
+    </div>
+</body>
+
+</html>
+
+

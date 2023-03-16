@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;8618</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseLibs\ESC5.WebCommon\ESC5.WebCommon.csproj" />
+    <ProjectReference Include="..\BaseLibs\ProjectBase\ProjectBase.csproj" />
+    <ProjectReference Include="..\ESC5.Common\ESC5.Common.csproj" />
+    <ProjectReference Include="..\ESC5.Domain\ESC5.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

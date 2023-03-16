@@ -1,0 +1,12 @@
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\bin\Debug\net5.0\Logger.deps.json
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\bin\Debug\net5.0\Logger.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\bin\Debug\net5.0\Logger.pdb
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.csproj.AssemblyReference.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.AssemblyInfoInputs.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.AssemblyInfo.cs
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.csproj.CoreCompileInputs.cache
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\Logger.pdb
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\obj\Debug\net5.0\ref\Logger.dll
+C:\Project\Train\branches\Train_Gsq\BaseLibs\Logger\bin\Debug\net5.0\ref\Logger.dll

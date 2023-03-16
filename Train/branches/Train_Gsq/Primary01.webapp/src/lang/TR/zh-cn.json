@@ -1,0 +1,10 @@
+{
+    "Error": {
+        "UQ_TA_Task": "测试merge",
+        "UQ_Home": "测试merge",
+        "UserInvalidOrPasswordErrorException": "账号或密码错误！"
+    },
+    "V": {
+        "Required_Code": "用户Id不能为空"
+    }
+}

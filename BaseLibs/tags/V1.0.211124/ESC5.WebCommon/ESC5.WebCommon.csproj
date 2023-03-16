@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;8618</NoWarn>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ESC5.AppBase\ESC5.AppBase.csproj" />
+		<ProjectReference Include="..\ESC5.ValueObject\ESC5.ValueObject.csproj" />
+		<ProjectReference Include="..\IdentityService\IdentityService.csproj" />
+		<ProjectReference Include="..\ProjectBase\ProjectBase.csproj" />
+	</ItemGroup>
+
+</Project>

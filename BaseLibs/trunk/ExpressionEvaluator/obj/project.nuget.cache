@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "Mlx15dWh6gKcYf9/bOyQB87YFZus2+0vF6nHpIBma90vjm0pvEsg3NCjk3Vrepc+HEqb/JFMkUnDK0F24CriSQ==",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Train\\branches\\Train_Gsq\\BaseLibs\\ExpressionEvaluator\\ExpressionEvaluator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gsq\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\microsoft.codeanalysis.common\\3.10.0\\microsoft.codeanalysis.common.3.10.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\3.10.0\\microsoft.codeanalysis.visualbasic.3.10.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.reflection.metadata\\5.0.0\\system.reflection.metadata.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\Gsq\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

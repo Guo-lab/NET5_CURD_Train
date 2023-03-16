@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\packages\Aspose.Cells.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ProjectBase\**" />
+    <EmbeddedResource Remove="ProjectBase\**" />
+    <None Remove="ProjectBase\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="RepositoryTestBase.cs" />
+    <Compile Remove="RepositoryTestsHelper.cs" />
+    <Compile Remove="TestBase\RepositoryTestBase.cs" />
+    <Compile Remove="TestBase\RepositoryTestsHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="BDRegistrarBase.java" />
+    <None Remove="HibernateSuiteListener.java" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.114.4" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityService\IdentityService.csproj" />
+    <ProjectReference Include="..\ProjectBase\ProjectBase.csproj" />
+  </ItemGroup>
+
+</Project>
