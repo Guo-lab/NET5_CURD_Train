@@ -4,6 +4,7 @@
     <div style="white-space: nowrap;">
         <div class="e2-col-lg-3" style="text-align:left;">
             <kendo-button type="button" icon="'k-icon k-i-save'" ng-click="c.Save_click()">
+                <!--绑定事件只能写事件处理方法的调用---->
                 <span translate="Save"></span>
             </kendo-button>
         </div>
@@ -13,7 +14,7 @@
             </kendo-button>
         </div>
     </div>
-    @Html.NgHiddenFor(m => m.Input.Id)
+    @Html.NgHiddenFor(m => m.Input.Id) <!--不需要输入单要提交的数据使用隐藏控件-->
     <table class="table table-bordered table-striped">
         <tbody>
             <tr>
@@ -37,7 +38,7 @@
                     @Html.NgLabelFor(m => m.Input.Age, "e2-label")
                 </td>
                 <td>
-                    @Html.KendoNumericBoxFor(m => m.Input.Age)
+                    @Html.KendoNumericBoxFor(m => m.Input.Age) <!--数字型数据使用数字输入控件-->
                 </td>
             </tr>
             <tr>
@@ -62,6 +63,7 @@
                 </td>
                 <td>
                     @Html.KendoDropDownListFor(m => m.Input.Rank).Enum("User_RankEnum").OptionLabel()
+                    <!--枚举数据使用下拉列表控件，须指定枚举类型名. 使用枚举则缺省no-dot-id=true, primitive=true.-->
                 </td>
             </tr>
             <tr>
@@ -72,6 +74,16 @@
                     @Html.NgCheckBoxFor(m => m.Input.Active)
                 </td>
             </tr>
+
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Mood, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.Mood)
+                </td>
+            </tr>
+
         </tbody>
 
     </table>

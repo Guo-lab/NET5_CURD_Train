@@ -19,7 +19,18 @@ namespace ESC5.Common.ViewModel.TR
     {
         public IList<ListRow> ResultList { get; set; } = new List<ListRow>();
         public SearchInput Input { get; set; } = new();
+
+        /// <summary>
+        /// DORef类型使用：
+        //// 1.Controller中取下拉列表数据源XxxBD.GetRefList()
+        //// 通常下拉列表数据用于选择一个对象引用，BD.GetRefList() 为此种场景返回集合，元素为类型是DORef的对象，其包含Id和RefText两个属性，后者用于文字显示。
+        //// 2.从DORef向DO赋值
+        //// 3.从DO向DORef赋值
+        //// 4.DORef类型的查询条件处理（判断输入，与构建lamda）
+        /// </summary>
         public IList<DORef<User,int>> UserList { get; set; }
+
+
 
         [DisplayName("Task")]
         public class SearchInput
@@ -52,11 +63,11 @@ namespace ESC5.Common.ViewModel.TR
 
             public void Merge()
             {
-                Haha = "hahahaha"+Name;
+                Haha = "hahahaha" + Name;
             }
             public void Merge(BaseSelfMergerContext context)
             {
-                Haha = "hahahaha"+ context.ToString();
+                Haha = "hahahaha" + context.ToString();
             }
 
             public void MergeVar<TVariantSource>(TVariantSource src)
@@ -94,20 +105,27 @@ namespace ESC5.Common.ViewModel.TR
         public class EditInput : ValidatableObject,IValidateWhen
         {
             public int Id { get; set; }
+
             [StringLength(10)]
             public string Code { get; set; }
+            
             [StringLength(8,Groups ="A")]
             public string Name { get; set; }
+            
             public DORef<User,int>? User { get; set; }
+            
             [ValidateWhen]
             public int MaxItemCount { get; set; }
+            
             [Max("2099-03-01")]
             public DateTime? CreateDate { get; set; }
+            
             [DecimalFormat(5,3)]
             [Range(-100,100)]
             [Required(Groups ="_A")]
             [VmInner(nameof(ValScore))]
             public decimal? Score { get; set; }
+            
             public Task.StatusEnum Status { get; set; }
             public bool Active { get; set; }
 

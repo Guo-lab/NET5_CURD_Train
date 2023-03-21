@@ -1,4 +1,6 @@
 def.ns = "/TR/Task_Info/";
+
+
 def.ContentState('List').Controller(['pb', 'serverVm', '$scope','pbui', function (pb, serverVm, $scope,pbui) {
     var c = pb.Super(this, serverVm, $scope);
 
@@ -21,6 +23,8 @@ def.ContentState('List').Controller(['pb', 'serverVm', '$scope','pbui', function
         c.Search_click();
     };
 }]);
+
+
 def.ContentState('Edit', 'Id').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
     var c = pb.Super(this, serverVm, $scope);
 
@@ -53,7 +57,11 @@ def.ContentState('Edit', 'Id').Controller(['pb', 'serverVm', '$scope', function 
         pb.AjaxNavBack();
     };
 }]);
+
+
 def.ContentState('Add').WithController('Edit');
+
+
 def.ContentState('MultiEdit').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
     var c = pb.Super(this, serverVm, $scope);
 

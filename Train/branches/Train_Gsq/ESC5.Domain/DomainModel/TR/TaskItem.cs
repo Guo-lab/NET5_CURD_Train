@@ -13,8 +13,6 @@ namespace ESC5.Domain.DomainModel.TR
         [DomainSignature]
         public virtual string ItemNo { get; set; }
 
-
-
         #endregion
 
     }

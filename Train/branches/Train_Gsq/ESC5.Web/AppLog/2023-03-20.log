@@ -1,0 +1,359 @@
+Source:BaseController.OnException
+Time:2023/3/20 17:12:34
+StackTrace:   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Boolean[] notNull, SqlCommandInfo sql, Object obj, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Object obj, ISessionImplementor session)
+   at NHibernate.Action.EntityIdentityInsertAction.Execute()
+   at NHibernate.Engine.ActionQueue.InnerExecute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.FireSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.SaveOrUpdate(Object obj)
+   at SharpArch.NHibernate.NHibernateRepositoryWithTypedId`2.SaveOrUpdate(T entity) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\SharpArch\SharpArch.NHibernate\NHibernateRepositoryWithTypedId.cs:line 190
+   at ProjectBase.BusinessDelegate.CommonBD`2.Save(T domainObject) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonBD.cs:line 51
+   at ESC5.Web.Mvc.TR.Task_ListController.TestMultiInsert()
+   at lambda_method320(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'Id'，表 'Train_Gsq.dbo.TR_Task'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(DbCommand insert, ISessionImplementor session)
+   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+ClientConnectionId:5aa62774-bbbb-4c37-a773-94220f4ad9d1
+Error Number:515,State:2,Class:16
+不能将值 NULL 插入列 'Id'，表 'Train_Gsq.dbo.TR_Task'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+could not insert: [ESC5.Domain.DomainModel.TR.Task][SQL: INSERT INTO Train_Gsq.dbo.TR_Task (Code, Name, UserId, MaxItemCount, CreateDate, Score, Status, Active) VALUES (?, ?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY()]
+----------------------------------
+Source:Application_Error
+Time:2023/3/20 17:12:55
+StackTrace:   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+Message:Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+----------------------------------
+Source:Application_Error
+Time:2023/3/20 17:13:06
+StackTrace:   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+Message:Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+----------------------------------
+Source:Application_Error
+Time:2023/3/20 17:13:07
+StackTrace:   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+Message:Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+----------------------------------
+Source:Application_Error
+Time:2023/3/20 17:13:14
+StackTrace:   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+Message:Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+One or more compilation failures occurred:
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\TR\User\List.cshtml(1,19): Error RZ1017: Unexpected literal following the 'model' directive. Expected 'line break'.
+----------------------------------
+Source:Application_Error
+Time:2023/3/20 17:20:05
+StackTrace:   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+Message:System.InvalidOperationException: The view 'Search' was not found. The following locations were searched:
+~/TR/User/Search.cshtml
+~/TR/Shared/Search.cshtml
+/Areas/TR/Views/User/Search.cshtml
+/Areas/TR/Views/Shared/Search.cshtml
+/Views/Shared/Search.cshtml
+/Pages/Shared/Search.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+The view 'Search' was not found. The following locations were searched:
+~/TR/User/Search.cshtml
+~/TR/Shared/Search.cshtml
+/Areas/TR/Views/User/Search.cshtml
+/Areas/TR/Views/Shared/Search.cshtml
+/Views/Shared/Search.cshtml
+/Pages/Shared/Search.cshtml
+----------------------------------

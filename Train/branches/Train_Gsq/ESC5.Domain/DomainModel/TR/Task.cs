@@ -9,12 +9,12 @@ namespace ESC5.Domain.DomainModel.TR
     public class Task: BaseDomainObject
     {
         public static readonly SortStruc<Task>[] DefaultSort = new SortStruc<Task>[]
-                                                                    {
-                                                                        new SortStruc<Task>{
-                                                                            OrderByExpression=o => o.Name,
-                                                                            OrderByDirection = OrderByDirectionEnum.Asc
-                                                                        }
-                                                               };
+        {
+            new SortStruc<Task>{
+                OrderByExpression=o => o.Name,
+                OrderByDirection = OrderByDirectionEnum.Asc
+            }
+        };
         #region "persistent properties"
 
         [DomainSignature]
@@ -28,7 +28,7 @@ namespace ESC5.Domain.DomainModel.TR
         public virtual bool Active { get; set; }
 
 
-       public virtual IList<TaskItem> TaskItems { get; set; } = new List<TaskItem>();
+        public virtual IList<TaskItem> TaskItems { get; set; } = new List<TaskItem>();
 
         #endregion
 

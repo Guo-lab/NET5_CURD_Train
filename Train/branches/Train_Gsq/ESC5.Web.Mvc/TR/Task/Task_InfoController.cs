@@ -50,11 +50,12 @@ namespace ESC5.Web.Mvc.TR
             {
                 filter = filter.And(o => o.User!.Id== input.User.Id);
             }
-            var list = TaskBD.GetDtoList<TaskListVM.ListRow>(q => q.Distinct(),
-                                                        input.ListInput.Pager,
-                                                        filter,//,
-                                                       ""//input.ListInput.OrderExpression
-                                                       ); 
+            var list = TaskBD.GetDtoList<TaskListVM.ListRow>(
+                q => q.Distinct(),
+                input.ListInput.Pager,
+                filter,//,
+                ""//input.ListInput.OrderExpression
+            ); 
             list.MergeList(new List<string> { "aaa", "bbb" },(src,tar)=>src.StartsWith("a"));
             return list;
         }
@@ -78,7 +79,7 @@ namespace ESC5.Web.Mvc.TR
             var m = CreateTaskEditVM();
             //m.Input = Map(TaskBD.Get(Id), m.Input); 取出DO后Map，性能较差
             //m.Input = TaskBD.GetDto<TaskEditVM.EditInput>(o => o.Id == Id);自己写where，性能提高，稍微麻烦，但可以返回null
-            m.Input = TaskBD.GetDto<TaskEditVM.EditInput>(Id);//最简单，性能提高，与Get(Id)一样不会返回null而会抛出找不到记录的异常
+            m.Input = TaskBD.GetDto<TaskEditVM.EditInput>(Id); //最简单，性能提高，与Get(Id)一样不会返回null而会抛出找不到记录的异常
             return ForView(m);
         }
 
@@ -89,6 +90,7 @@ namespace ESC5.Web.Mvc.TR
                 UserList = UserBD.GetRefList()
             };
         }
+
 
         [HttpPost]
         [Transaction(System.Data.IsolationLevel.ReadUncommitted)]
@@ -118,6 +120,16 @@ namespace ESC5.Web.Mvc.TR
             if (input.Id == 0) return Noop();
             return SaveOk();
         }
+
+
+
+
+
+
+
+
+
+
 
 
         public ActionResult MultiEdit()

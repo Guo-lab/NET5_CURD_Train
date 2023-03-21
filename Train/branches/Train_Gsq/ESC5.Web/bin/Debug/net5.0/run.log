@@ -1,88 +1,350 @@
-2023-03-16 14:26:12,648 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - NHibernate 5.3.8+96a9af7a83ee697eb1f62a915f8da80a8eaca197 (assembly 5.3.0.0)
+2023-03-21 11:56:33,156 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - NHibernate 5.3.8+96a9af7a83ee697eb1f62a915f8da80a8eaca197 (assembly 5.3.0.0)
 
-2023-03-16 14:26:12,718 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - hibernate-configuration section not found in application configuration file
+2023-03-21 11:56:33,298 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - hibernate-configuration section not found in application configuration file
 
-2023-03-16 14:26:12,723 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Bytecode provider name : lcg
+2023-03-21 11:56:33,303 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Bytecode provider name : lcg
 
-2023-03-16 14:26:12,726 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Objects factory class : NHibernate.Bytecode.ActivatorObjectsFactory
+2023-03-21 11:56:33,307 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Objects factory class : NHibernate.Bytecode.ActivatorObjectsFactory
 
-2023-03-16 14:26:12,728 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using reflection optimizer
+2023-03-21 11:56:33,311 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using reflection optimizer
 
-2023-03-16 14:26:13,010 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Task -> TR_Task
+2023-03-21 11:56:33,726 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Task -> TR_Task
 
-2023-03-16 14:26:13,053 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.TaskItem -> TR_TaskItem
+2023-03-21 11:56:33,808 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.TaskItem -> TR_TaskItem
 
-2023-03-16 14:26:13,057 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.User -> TR_User
+2023-03-21 11:56:33,812 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.User -> TR_User
 
-2023-03-16 14:26:13,067 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-21 11:56:33,834 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-16 14:26:13,087 [1] INFO NHibernate.Log4NetLogger.Info(:0) - checking mappings queue
+2023-03-21 11:56:33,873 [1] INFO NHibernate.Log4NetLogger.Info(:0) - checking mappings queue
 
-2023-03-16 14:26:13,089 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-many association mappings
+2023-03-21 11:56:33,878 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-many association mappings
 
-2023-03-16 14:26:13,096 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - mapping collection: ESC5.Domain.DomainModel.TR.Task.TaskItems -> TR_TaskItem
+2023-03-21 11:56:33,886 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - mapping collection: ESC5.Domain.DomainModel.TR.Task.TaskItems -> TR_TaskItem
 
-2023-03-16 14:26:13,103 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-one association property references
+2023-03-21 11:56:33,895 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-one association property references
 
-2023-03-16 14:26:13,106 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing foreign key constraints
+2023-03-21 11:56:33,899 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing foreign key constraints
 
-2023-03-16 14:26:13,117 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing filters (second pass)
+2023-03-21 11:56:33,914 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing filters (second pass)
 
-2023-03-16 14:26:13,128 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+2023-03-21 11:56:33,929 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
 
-2023-03-16 14:26:13,144 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+2023-03-21 11:56:33,950 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
 
-2023-03-16 14:26:13,154 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-21 11:56:33,960 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-16 14:26:13,179 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-21 11:56:33,986 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-16 14:26:13,243 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using dialect defined converter
+2023-03-21 11:56:34,067 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using dialect defined converter
 
-2023-03-16 14:26:13,246 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Generate SQL with comments: disabled
+2023-03-21 11:56:34,074 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Generate SQL with comments: disabled
 
-2023-03-16 14:26:13,249 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2023-03-21 11:56:34,078 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
 
-2023-03-16 14:26:13,252 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Configuring ConnectionProvider
+2023-03-21 11:56:34,081 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Configuring ConnectionProvider
 
-2023-03-16 14:26:13,256 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-21 11:56:34,086 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-16 14:26:13,258 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
+2023-03-21 11:56:34,090 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
 
-2023-03-16 14:26:13,262 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Optimize cache for minimal puts: False
+2023-03-21 11:56:34,094 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Optimize cache for minimal puts: False
 
-2023-03-16 14:26:13,264 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Connection release mode: auto
+2023-03-21 11:56:34,097 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Connection release mode: auto
 
-2023-03-16 14:26:13,266 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default schema: ESC5.dbo
+2023-03-21 11:56:34,101 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default schema: Train_Gsq.dbo
 
-2023-03-16 14:26:13,268 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default batch fetch size: 1
+2023-03-21 11:56:34,103 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default batch fetch size: 1
 
-2023-03-16 14:26:13,270 [1] INFO NHibernate.Log4NetLogger.Info(:0) - echoing all SQL to stdout
+2023-03-21 11:56:34,107 [1] INFO NHibernate.Log4NetLogger.Info(:0) - echoing all SQL to stdout
 
-2023-03-16 14:26:13,272 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Statistics: disabled
+2023-03-21 11:56:34,110 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Statistics: disabled
 
-2023-03-16 14:26:13,273 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Deleted entity synthetic identifier rollback: disabled
+2023-03-21 11:56:34,113 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Deleted entity synthetic identifier rollback: disabled
 
-2023-03-16 14:26:13,276 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2023-03-21 11:56:34,118 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
 
-2023-03-16 14:26:13,279 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query provider: NHibernate.Linq.DefaultQueryProvider
+2023-03-21 11:56:34,122 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query provider: NHibernate.Linq.DefaultQueryProvider
 
-2023-03-16 14:26:13,283 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query language substitutions: {'true'='1', 'false'='0'}
+2023-03-21 11:56:34,129 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query language substitutions: {'true'='1', 'false'='0'}
 
-2023-03-16 14:26:13,286 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2023-03-21 11:56:34,137 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
 
-2023-03-16 14:26:13,288 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL inserts for batching: enabled
+2023-03-21 11:56:34,144 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL inserts for batching: enabled
 
-2023-03-16 14:26:13,291 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL updates for batching: disabled
+2023-03-21 11:56:34,149 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL updates for batching: disabled
 
-2023-03-16 14:26:13,294 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Batcher factory: NHibernate.AdoNet.GenericBatchingBatcherFactory, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2023-03-21 11:56:34,156 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Batcher factory: NHibernate.AdoNet.GenericBatchingBatcherFactory, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
 
-2023-03-16 14:26:13,297 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using Isolation Level: ReadCommitted
+2023-03-21 11:56:34,160 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using Isolation Level: ReadCommitted
 
-2023-03-16 14:26:13,300 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default flush mode: Auto
+2023-03-21 11:56:34,164 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default flush mode: Auto
 
-2023-03-16 14:26:13,303 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Named query checking : enabled
+2023-03-21 11:56:34,168 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Named query checking : enabled
 
-2023-03-16 14:26:13,326 [1] INFO NHibernate.Log4NetLogger.Info(:0) - building session factory
+2023-03-21 11:56:34,196 [1] INFO NHibernate.Log4NetLogger.Info(:0) - building session factory
 
-2023-03-16 14:26:13,689 [1] INFO NHibernate.Log4NetLogger.Info(:0) - no name configured
+2023-03-21 11:56:34,688 [1] INFO NHibernate.Log4NetLogger.Info(:0) - no name configured
+
+2023-03-21 11:56:40,567 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-21 11:56:40,970 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Id (Class)]
+
+2023-03-21 11:56:40,981 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Id (Class)]
+
+2023-03-21 11:56:40,985 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Code (Class)]
+
+2023-03-21 11:56:40,988 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Code (Class)]
+
+2023-03-21 11:56:40,993 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Name (Class)]
+
+2023-03-21 11:56:40,997 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Name (Class)]
+
+2023-03-21 11:56:41,001 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Age (Class)]
+
+2023-03-21 11:56:41,006 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Age (Class)]
+
+2023-03-21 11:56:41,010 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> BirthDate (Class)]
+
+2023-03-21 11:56:41,014 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> BirthDate (Class)]
+
+2023-03-21 11:56:41,017 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Salary (Class)]
+
+2023-03-21 11:56:41,021 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Salary (Class)]
+
+2023-03-21 11:56:41,025 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Rank (Class)]
+
+2023-03-21 11:56:41,029 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Rank (Class)]
+
+2023-03-21 11:56:41,033 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Active (Class)]
+
+2023-03-21 11:56:41,037 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Active (Class)]
+
+2023-03-21 11:56:41,045 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Mood (Class)]
+
+2023-03-21 11:56:41,049 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Mood (Class)]
+
+2023-03-21 11:56:41,059 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Name (Class)]
+
+2023-03-21 11:58:02,103 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Id (Class)]
+
+2023-03-21 11:58:02,125 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Id (Class)]
+
+2023-03-21 11:58:02,133 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> RefText (Class)]
+
+2023-03-21 11:58:02,139 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> RefText (Class)]
+
+2023-03-21 11:58:02,144 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Name (Class)]
+
+2023-03-21 11:58:02,168 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-21 11:58:02,215 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> User (Class)]
+
+2023-03-21 11:58:02,224 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Id (Class)]
+
+2023-03-21 11:58:02,229 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Id (Class)]
+
+2023-03-21 11:58:02,233 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Code (Class)]
+
+2023-03-21 11:58:02,238 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Code (Class)]
+
+2023-03-21 11:58:02,242 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Name (Class)]
+
+2023-03-21 11:58:02,246 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Name (Class)]
+
+2023-03-21 11:58:02,261 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> User (Class)]
+
+2023-03-21 11:58:02,266 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Id (Class)]
+
+2023-03-21 11:58:02,269 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Id (Class)]
+
+2023-03-21 11:58:02,273 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> User (Class)]
+
+2023-03-21 11:58:02,277 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-21 11:58:02,280 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-21 11:58:02,286 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> Name (Class)]
+
+2023-03-21 11:58:02,290 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> Name (Class)]
+
+2023-03-21 11:58:02,293 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> MaxItemCount (Class)]
+
+2023-03-21 11:58:02,297 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> MaxItemCount (Class)]
+
+2023-03-21 11:58:02,301 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> CreateDate (Class)]
+
+2023-03-21 11:58:02,305 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> CreateDate (Class)]
+
+2023-03-21 11:58:02,309 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Score (Class)]
+
+2023-03-21 11:58:02,312 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Score (Class)]
+
+2023-03-21 11:58:02,316 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Status (Class)]
+
+2023-03-21 11:58:02,321 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Status (Class)]
+
+2023-03-21 11:58:02,327 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Active (Class)]
+
+2023-03-21 11:58:02,332 [21] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (f) -> Active (Class)]
+
+2023-03-21 11:58:35,091 [19] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-21 11:58:35,095 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> CreateDate (Class)]
+
+2023-03-21 11:58:35,108 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:35,111 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:35,115 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:35,118 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Code (Class)]
+
+2023-03-21 11:58:35,123 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Code (Class)]
+
+2023-03-21 11:58:35,128 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Name (Class)]
+
+2023-03-21 11:58:35,133 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Name (Class)]
+
+2023-03-21 11:58:35,137 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:35,141 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:35,144 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:35,148 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:35,152 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-21 11:58:35,157 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-21 11:58:35,161 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> Name (Class)]
+
+2023-03-21 11:58:35,165 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> Name (Class)]
+
+2023-03-21 11:58:35,169 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> MaxItemCount (Class)]
+
+2023-03-21 11:58:35,173 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> MaxItemCount (Class)]
+
+2023-03-21 11:58:35,176 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> CreateDate (Class)]
+
+2023-03-21 11:58:35,180 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> CreateDate (Class)]
+
+2023-03-21 11:58:35,184 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Score (Class)]
+
+2023-03-21 11:58:35,188 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Score (Class)]
+
+2023-03-21 11:58:35,192 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Status (Class)]
+
+2023-03-21 11:58:35,195 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Status (Class)]
+
+2023-03-21 11:58:35,199 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Active (Class)]
+
+2023-03-21 11:58:35,204 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Active (Class)]
+
+2023-03-21 11:58:35,208 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> CreateDate (Class)]
+
+2023-03-21 11:58:35,212 [19] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Name (Class)]
+
+2023-03-21 11:58:36,249 [27] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-21 11:58:36,259 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:36,275 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:36,281 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:36,286 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:36,289 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Code (Class)]
+
+2023-03-21 11:58:36,292 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Code (Class)]
+
+2023-03-21 11:58:36,296 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Name (Class)]
+
+2023-03-21 11:58:36,299 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Name (Class)]
+
+2023-03-21 11:58:36,303 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:36,306 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:36,310 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Id (Class)]
+
+2023-03-21 11:58:36,315 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:36,319 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-21 11:58:36,323 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-21 11:58:36,328 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> Name (Class)]
+
+2023-03-21 11:58:36,333 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> Name (Class)]
+
+2023-03-21 11:58:36,339 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> MaxItemCount (Class)]
+
+2023-03-21 11:58:36,344 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> MaxItemCount (Class)]
+
+2023-03-21 11:58:36,348 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> CreateDate (Class)]
+
+2023-03-21 11:58:36,353 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> CreateDate (Class)]
+
+2023-03-21 11:58:36,357 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Score (Class)]
+
+2023-03-21 11:58:36,361 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Score (Class)]
+
+2023-03-21 11:58:36,365 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Status (Class)]
+
+2023-03-21 11:58:36,369 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Status (Class)]
+
+2023-03-21 11:58:36,373 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Active (Class)]
+
+2023-03-21 11:58:36,377 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Active (Class)]
+
+2023-03-21 11:58:36,381 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> User (Class)]
+
+2023-03-21 11:58:36,384 [27] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Task (o) -> Name (Class)]
+
+2023-03-21 12:00:14,698 [33] INFO NHibernate.Hql.Ast.ANTLR.HqlSqlWalker.IsNonQualifiedPropertyRef(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-21 12:00:14,703 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Age (Class)]
+
+2023-03-21 12:00:14,716 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Id (Class)]
+
+2023-03-21 12:00:14,721 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Id (Class)]
+
+2023-03-21 12:00:14,725 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Code (Class)]
+
+2023-03-21 12:00:14,730 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Code (Class)]
+
+2023-03-21 12:00:14,734 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Name (Class)]
+
+2023-03-21 12:00:14,740 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Name (Class)]
+
+2023-03-21 12:00:14,745 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Age (Class)]
+
+2023-03-21 12:00:14,750 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Age (Class)]
+
+2023-03-21 12:00:14,756 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> BirthDate (Class)]
+
+2023-03-21 12:00:14,762 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> BirthDate (Class)]
+
+2023-03-21 12:00:14,767 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Salary (Class)]
+
+2023-03-21 12:00:14,776 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Salary (Class)]
+
+2023-03-21 12:00:14,782 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Rank (Class)]
+
+2023-03-21 12:00:14,787 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Rank (Class)]
+
+2023-03-21 12:00:14,794 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Active (Class)]
+
+2023-03-21 12:00:14,798 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Active (Class)]
+
+2023-03-21 12:00:14,804 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Mood (Class)]
+
+2023-03-21 12:00:14,811 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Mood (Class)]
+
+2023-03-21 12:00:14,815 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Age (Class)]
+
+2023-03-21 12:00:14,820 [33] INFO NHibernate.Hql.Ast.ANTLR.Tree.FromElement.HandlePropertyBeingDereferenced(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (f) -> Name (Class)]
 
