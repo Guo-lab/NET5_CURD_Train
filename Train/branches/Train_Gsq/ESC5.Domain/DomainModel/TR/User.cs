@@ -49,7 +49,6 @@ namespace ESC5.Domain.DomainModel.TR
 
 
         // -------- Add a new field --------
-        private string mood;
-        public virtual string Mood { get => mood; set => mood = value; }
+        public virtual string Mood { get; set; }
     }
 }

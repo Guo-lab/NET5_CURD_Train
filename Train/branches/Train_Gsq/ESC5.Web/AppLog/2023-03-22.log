@@ -1,0 +1,430 @@
+Source:Application_Error
+Time:2023/3/22 10:40:52
+StackTrace:   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+Message:Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+ESC5.Web.TR.Customer.HomeController.Index (ESC5.Web)
+ESC5.Web.Mvc.Home.HomeController.Index (ESC5.Web.Mvc)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+The request matched multiple endpoints. Matches: 
+
+ESC5.Web.TR.Customer.HomeController.Index (ESC5.Web)
+ESC5.Web.Mvc.Home.HomeController.Index (ESC5.Web.Mvc)
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:00:09
+StackTrace:   at ProjectBase.BusinessDelegate.CommonReader`2.BuildSelector(Type dtoClass, Expression`1 where, IDictionary`2 selectorMap, String pname) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 409
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 338
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 271
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 50
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 29
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:ProjectBase.Utils.NetArchException: 无法从DTO对象的属性名推断出对应的Select表达式：Sepnding
+   at ProjectBase.BusinessDelegate.CommonReader`2.BuildSelector(Type dtoClass, Expression`1 where, IDictionary`2 selectorMap, String pname) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 409
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 338
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 271
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 50
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 29
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+无法从DTO对象的属性名推断出对应的Select表达式：Sepnding
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:00:20
+StackTrace:   at ProjectBase.BusinessDelegate.CommonReader`2.BuildSelector(Type dtoClass, Expression`1 where, IDictionary`2 selectorMap, String pname) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 409
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 338
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 271
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 50
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 29
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:ProjectBase.Utils.NetArchException: 无法从DTO对象的属性名推断出对应的Select表达式：Sepnding
+   at ProjectBase.BusinessDelegate.CommonReader`2.BuildSelector(Type dtoClass, Expression`1 where, IDictionary`2 selectorMap, String pname) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 409
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 338
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 271
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 50
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 29
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+无法从DTO对象的属性名推断出对应的Select表达式：Sepnding
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:02:30
+StackTrace:   at ProjectBase.BusinessDelegate.CommonReader`2.BuildSelector(Type dtoClass, Expression`1 where, IDictionary`2 selectorMap, String pname) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 409
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 338
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 271
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 50
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 29
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:ProjectBase.Utils.NetArchException: 无法从DTO对象的属性名推断出对应的Select表达式：Sepnding
+   at ProjectBase.BusinessDelegate.CommonReader`2.BuildSelector(Type dtoClass, Expression`1 where, IDictionary`2 selectorMap, String pname) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 409
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 338
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 271
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 50
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 29
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+无法从DTO对象的属性名推断出对应的Select表达式：Sepnding
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:21:30
+StackTrace:   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions[T](List`1 list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at ProjectBase.Web.Mvc.TransactionAttribute.OnActionExecuted(ActionExecutedContext filterContext) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\TransactionAttribute.cs:line 83
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.BatchingCommandSet.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:db6b9658-42bc-479b-8dc6-df9cebaa590a
+Error Number:264,State:1,Class:16
+在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+could not execute batch command.[SQL: SQL not available]
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:22:06
+StackTrace:   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions[T](List`1 list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at ProjectBase.Web.Mvc.TransactionAttribute.OnActionExecuted(ActionExecutedContext filterContext) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\TransactionAttribute.cs:line 83
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.BatchingCommandSet.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:db6b9658-42bc-479b-8dc6-df9cebaa590a
+Error Number:264,State:1,Class:16
+在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+could not execute batch command.[SQL: SQL not available]
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:38:19
+StackTrace:   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions[T](List`1 list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at ProjectBase.Web.Mvc.TransactionAttribute.OnActionExecuted(ActionExecutedContext filterContext) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\TransactionAttribute.cs:line 83
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.BatchingCommandSet.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:c169e66d-a219-472d-8636-5f4f1e1b341e
+Error Number:264,State:1,Class:16
+在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+could not execute batch command.[SQL: SQL not available]
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 14:40:50
+StackTrace:   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Boolean[] notNull, SqlCommandInfo sql, Object obj, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Object obj, ISessionImplementor session)
+   at NHibernate.Action.EntityIdentityInsertAction.Execute()
+   at NHibernate.Engine.ActionQueue.InnerExecute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.FireSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.SaveOrUpdate(Object obj)
+   at SharpArch.NHibernate.NHibernateRepositoryWithTypedId`2.SaveOrUpdate(T entity) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\SharpArch\SharpArch.NHibernate\NHibernateRepositoryWithTypedId.cs:line 190
+   at ProjectBase.BusinessDelegate.CommonBD`2.Save(T domainObject) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonBD.cs:line 51
+   at ESC5.Web.Mvc.TR.UserController.Save(EditInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\UserController.cs:line 140
+   at lambda_method244(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(DbCommand insert, ISessionImplementor session)
+   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+ClientConnectionId:c169e66d-a219-472d-8636-5f4f1e1b341e
+Error Number:264,State:1,Class:16
+在 INSERT 的 SET 子句或列列表中多次指定了列名“Mood”。在同一子句中不得为一个列分配多个值。请修改该子句，以确保一个列仅更新一次。如果此语句在视图中更新或插入列，列别名可能掩盖您的代码中的重复情况。
+could not insert: [ESC5.Domain.DomainModel.TR.User][SQL: INSERT INTO Train_Gsq.dbo.TR_User (Code, Name, Age, BirthDate, Salary, Rank, Active, Mood, mood) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY()]
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 15:24:28
+StackTrace:   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Boolean[] notNull, SqlCommandInfo sql, Object obj, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Object obj, ISessionImplementor session)
+   at NHibernate.Action.EntityIdentityInsertAction.Execute()
+   at NHibernate.Engine.ActionQueue.InnerExecute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.FireSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.SaveOrUpdate(Object obj)
+   at SharpArch.NHibernate.NHibernateRepositoryWithTypedId`2.SaveOrUpdate(T entity) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\SharpArch\SharpArch.NHibernate\NHibernateRepositoryWithTypedId.cs:line 190
+   at ProjectBase.BusinessDelegate.CommonBD`2.Save(T domainObject) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonBD.cs:line 51
+   at ESC5.Web.Mvc.TR.CustomerController.Save(EditInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 112
+   at lambda_method185(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'Vip'，表 'Train_Gsq.dbo.TR_Customer'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(DbCommand insert, ISessionImplementor session)
+   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+ClientConnectionId:b7f3178e-f2da-43d3-a9ab-e220081ba3e6
+Error Number:515,State:2,Class:16
+不能将值 NULL 插入列 'Vip'，表 'Train_Gsq.dbo.TR_Customer'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+could not insert: [ESC5.Domain.DomainModel.TR.Customer][SQL: INSERT INTO Train_Gsq.dbo.TR_Customer (Email, Name_, Gender, RegisterDate, Spending, Vip, Active) VALUES (?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY()]
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/22 15:32:04
+StackTrace:   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Boolean[] notNull, SqlCommandInfo sql, Object obj, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Object obj, ISessionImplementor session)
+   at NHibernate.Action.EntityIdentityInsertAction.Execute()
+   at NHibernate.Engine.ActionQueue.InnerExecute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.FireSaveOrUpdate(SaveOrUpdateEvent event)
+   at NHibernate.Impl.SessionImpl.SaveOrUpdate(Object obj)
+   at SharpArch.NHibernate.NHibernateRepositoryWithTypedId`2.SaveOrUpdate(T entity) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\SharpArch\SharpArch.NHibernate\NHibernateRepositoryWithTypedId.cs:line 190
+   at ProjectBase.BusinessDelegate.CommonBD`2.Save(T domainObject) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonBD.cs:line 51
+   at ESC5.Web.Mvc.TR.CustomerController.Save(EditInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 112
+   at lambda_method185(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Data.SqlClient.SqlException (0x80131904): 不能将值 NULL 插入列 'Vip'，表 'Train_Gsq.dbo.TR_Customer'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(DbCommand insert, ISessionImplementor session)
+   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+ClientConnectionId:b7f3178e-f2da-43d3-a9ab-e220081ba3e6
+Error Number:515,State:2,Class:16
+不能将值 NULL 插入列 'Vip'，表 'Train_Gsq.dbo.TR_Customer'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+could not insert: [ESC5.Domain.DomainModel.TR.Customer][SQL: INSERT INTO Train_Gsq.dbo.TR_Customer (Email, Name_, Gender, RegisterDate, Spending, Vip, Active) VALUES (?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY()]
+----------------------------------

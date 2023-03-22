@@ -73,15 +73,21 @@
         }
     </style>
 </head>
+
+
 <body ng-controller="BaseCtrl as baseCtrl" id="theBody">
     @Model
     <div class="main-center">
+        
+        <a @Url.State("root:/TR/Customer/List")>点我进入 New Table Customer 页面</a>
+
         <a @Url.State("root:/TR/User/List")>点我进入User清单页面</a>
         <a @Url.State("root:/TR/Task_Info/List")>点我进入Task_Info/List页面,DORef使用</a>
         <a @Url.State("root:/TR/Task_List/ListByDate")>点我进入ListByDate页面，缺省查询条件</a>
         <a @Url.State("root:/TR/Task_List/ApprovedList")>点我进入ApprovedList页面，固定查询条件</a>
         <a @Url.State("root:/TR/Task_Info/MultiEdit")>点我进入多行编辑页面</a>
         <a @Url.State("root:/TR/Task_Info/SectionedInfo(Id:1)")>点我进入SectionedInfo页面</a>
+        
         <div class="centre-right">
             <div Id="divMainContentView" style="height:100% !important" ui-view></div>
         </div>

@@ -454,3 +454,5 @@ C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\ESC5.Web.dll
 C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\ref\ESC5.Web.dll
 C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\ESC5.Web.pdb
 C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\ESC5.Web.genruntimeconfig.cache
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\List.cshtml.g.cs
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\Edit.cshtml.g.cs

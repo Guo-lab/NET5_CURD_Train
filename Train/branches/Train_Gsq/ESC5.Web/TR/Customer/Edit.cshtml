@@ -1,0 +1,80 @@
+﻿@model CustomerEditVM
+
+@using (Html.KendoForm("c.frmEdit", "Save"))
+{
+    <div style="white-space: nowrap;">
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-save'" ng-click="c.Save_click()">
+                <span translate="Save"></span>
+            </kendo-button>
+        </div>
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-back'" ng-click="c.Back_click()">
+                <span translate="Back"></span>
+            </kendo-button>
+        </div>
+    </div>
+    @Html.NgHiddenFor(m => m.Input.Id) <!--不需要输入单要提交的数据使用隐藏控件-->
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Email, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.Email)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Name_, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.Name_)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Gender, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.Gender) <!--数字型数据使用数字输入控件-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.RegisterDate, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDatePickerFor(m => m.Input.RegisterDate)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Spending, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.Spending)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Vip, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.Input.Vip)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.Active, "e2-label")
+                </td>
+                <td>
+                    @Html.NgCheckBoxFor(m => m.Input.Active)
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+}

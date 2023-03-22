@@ -24,12 +24,14 @@
             </div>
         </div>
     </div>
+
+
     <div style="margin-top:5px;">
         <!-- kendo-grid 控件 pb-kendo-grid为kendogrid绑定数据。该指令值为绑定的数据，通常是c.vm.该指令将绑定数据的ResultList属性和Input.ListInput属性关联到kendogrid的行数据、分页数据、排序数据上 同时支持页面跳转回来时保持这些表格状态 -->
-    <!-- pb-kendo-grid-cols 列设置-->
-    <!-- OT 表示使用模板且模板名称为固定的 Operation-template -->
-    <table kendo-grid="c.grdUser" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
-           pb-kendo-grid-cols="[
+        <!-- pb-kendo-grid-cols 列设置-->
+        <!-- OT 表示使用模板且模板名称为固定的 Operation-template -->
+        <table kendo-grid="c.grdUser" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+               pb-kendo-grid-cols="[
             'Code',
             'Name,T,60px|{style: \'text-align: center;background-color:red\'}',
             'Age',
@@ -40,44 +42,45 @@
             'Mood,,80px',
             ',OT',
             { field: '', width: '80px', attributes: { style: 'text-align: center' }, template: 'OT' }
-           ]" 
-           class="myTable">
-        <!--Table 内本地化字段名显示文本时 key 值规范为表名加下划线加字段名 -->
-        <thead>
-            <tr>
-                <th class="tableth"><span translate="User_Code"></span></th>
-                <th class="tableth"><span translate="User_Name"></span></th>
-                <th class="tableth"><span translate="User_Age"></span></th>
-                <th class="tableth"><span translate="User_BirthDate"></span></th>
-                <th class="tableth"><span translate="User_Salary"></span></th>
-                <th class="tableth"><span translate="User_Rank"></span></th>
-                <th class="tableth"><span translate="User_Active"></span></th>
-                <th class="tableth"><span translate="User_Mood"></span></th>
-                <th class="tableth"></th>
-                <th class="tableth"></th>
-            </tr>
-        </thead>
-    </table>
-    <!--kendo grid 列设置中使用的模板写在 table 后面-->
-    <!--kendo grid 的工具栏模板名固定为 Toolbar-template-->
-    <!--列使用的模板 命名为列名加 -template-->
-    <!--表格操作列模板 固定命名为 Operation-template-->
-    <!--对于 at Url.State nav:action-->
-    <script Id="Toolbar-template" type="text/x-kendo-template">
+           ]"
+               class="myTable">
+            <!--Table 内本地化字段名显示文本时 key 值规范为表名加下划线加字段名 -->
+            <thead>
+                <tr>
+                    <th class="tableth"><span translate="User_Code"></span></th>
+                    <th class="tableth"><span translate="User_Name"></span></th>
+                    <th class="tableth"><span translate="User_Age"></span></th>
+                    <th class="tableth"><span translate="User_BirthDate"></span></th>
+                    <th class="tableth"><span translate="User_Salary"></span></th>
+                    <th class="tableth"><span translate="User_Rank"></span></th>
+                    <th class="tableth"><span translate="User_Active"></span></th>
+                    <th class="tableth"><span translate="User_Mood"></span></th>
+                    <th class="tableth"></th>
+                    <th class="tableth"></th>
+                </tr>
+            </thead>
+        </table>
+        <!--kendo grid 列设置中使用的模板写在 table 后面-->
+        <!--kendo grid 的工具栏模板名固定为 Toolbar-template-->
+        <!--列使用的模板 命名为列名加 -template-->
+        <!--表格操作列模板 固定命名为 Operation-template-->
+        <!--对于 at Url.State nav:action-->
+
+        <script Id="Toolbar-template" type="text/x-kendo-template">
             <kendo-button @Url.State("forward:Add") icon="'k-icon k-i-add'" type="button">
                 <span translate="Add"></span>
             </kendo-button>
-    </script>
+        </script>
 
-    <!--"helper方法帮助生成链接的ngState的属性，点击即切换ngState。多个参数keyvalue对用逗号分隔"-->
-    <script Id="Name-template" type="text/x-kendo-template">
+        <!--"helper方法帮助生成链接的ngState的属性，点击即切换ngState。多个参数keyvalue对用逗号分隔"-->
+        <script Id="Name-template" type="text/x-kendo-template">
             <a class="a-link" @Url.State("forward:Edit(Id:#=Id#)")>#=Name#</a>
-    </script>
+        </script>
 
-    <script Id="Operation-template" type="text/x-kendo-template">
-        <kendo-button type="button" icon="'k-icon k-i-delete'" ng-click="c.Delete_click(#=Id#,'#=Name#')">
-            <span translate="Delete"></span>
-        </kendo-button>
-    </script>
+        <script Id="Operation-template" type="text/x-kendo-template">
+            <kendo-button type="button" icon="'k-icon k-i-delete'" ng-click="c.Delete_click(#=Id#,'#=Name#')">
+                <span translate="Delete"></span>
+            </kendo-button>
+        </script>
     </div>
 }

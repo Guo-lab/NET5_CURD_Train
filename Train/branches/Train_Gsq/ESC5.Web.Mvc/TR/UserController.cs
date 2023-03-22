@@ -21,6 +21,8 @@ namespace ESC5.Web.Mvc.TR // TR module
         public ICommonBD<User, int> UserBD { get; set; } // Base Domain 声明所需要的BD（会被自动注入），ICommandBD泛型接口不需要定义可直接使用
 
 
+        //ActionResult: A default implementation of Microsoft.AspNetCore.Mvc.IActionResult.
+        //public abstract class ActionResult : IActionResult
 
         // Action方法指的是public的 返回类型固定为IActionResult的方法
         // 每个Action对应一个http请求。
