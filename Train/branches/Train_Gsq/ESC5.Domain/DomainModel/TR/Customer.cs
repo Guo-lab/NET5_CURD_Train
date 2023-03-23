@@ -27,6 +27,7 @@ namespace ESC5.Domain.DomainModel.TR
         [DomainSignature] //// 标记业务唯一性属性（一个或多个）。每个DO类都必须标记
         public virtual string Email { get; set; }
 
+        // For other to refer
         [RefText("Email+Name_")]
         public virtual string Name_ { get; set; }
 
@@ -35,10 +36,13 @@ namespace ESC5.Domain.DomainModel.TR
         public virtual decimal Spending { get; set; }
 
 
-        // --------- Enum Fail ? ----------
-        public virtual int Vip { get; set; }
-        //public virtual RankEnum Vip { get; set; }
+        // --------- Enum Fail -> OK ----------
+        //public virtual int Vip { get; set; }
+        public virtual RankEnum Vip { get; set; }
         public virtual bool Active { get; set; }
+
+
+        public virtual User? User { get; set; }
 
         #endregion
 

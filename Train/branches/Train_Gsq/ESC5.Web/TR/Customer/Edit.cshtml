@@ -33,6 +33,16 @@
                     @Html.KendoTextBoxFor(m => m.Input.Name_)
                 </td>
             </tr>
+            <!--------- DORef User ------->
+            <!-- CustomerListVM UserList-->
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.User, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDropDownListFor(m => m.Input.User).DataSource("c.vm.UserList").OptionLabel()
+                </td>
+            </tr>
             <tr>
                 <td>
                     @Html.NgLabelFor(m => m.Input.Gender, "e2-label")
@@ -62,7 +72,7 @@
                     @Html.NgLabelFor(m => m.Input.Vip, "e2-label")
                 </td>
                 <td>
-                    @Html.KendoNumericBoxFor(m => m.Input.Vip)
+                    @Html.KendoDropDownListFor(m => m.Input.Vip).Enum("Customer_RankEnum").OptionLabel()
                 </td>
             </tr>
             <tr>
@@ -73,7 +83,6 @@
                     @Html.NgCheckBoxFor(m => m.Input.Active)
                 </td>
             </tr>
-
         </tbody>
 
     </table>

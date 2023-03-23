@@ -67,7 +67,10 @@
 <br>
 
 - Bugs: "sqlserver: 不能将值 NULL 插入列 'id'" + "阻止保存要求或者重新创建表"
-  Solution: [不允许保存更改的错误消息 - SQL Server | Microsoft Learn](https://learn.microsoft.com/zh-cn/troubleshoot/sql/ssms/error-when-you-save-table)
+  Solution:
+
+  - 数据库表邮右键设计，修改标识规范
+  - [不允许保存更改的错误消息 - SQL Server | Microsoft Learn](https://learn.microsoft.com/zh-cn/troubleshoot/sql/ssms/error-when-you-save-table)
 - Bugs: Error: kendo grid创建失败，请检查属性/参数设置是否正确、列设置的列数与tablehead中的列数是否一致 + Cannot read properties of undefined (reading 'replace')
   Solution: 命名需一致 （+ 有参数 undefined）
 
@@ -77,6 +80,8 @@
       'Name_,T,70px|{style: \'text-align: center;background-color:lightgreen\'}',
       'Gender,,80px', 'RegisterDate', 'Spending', 'Vip', 'Active', ',OT', ]" 
   class="myTable">
+  <!-- 'Vip, | Display: \'Customer_RankEnum\'',-->
+  <!-- Or 'Vip, | Dict: \'Customer_RankEnum\'',-->
   </table>
       ...
   <script Id="Name_-template" type="text/x-kendo-template">
@@ -89,3 +94,55 @@
       </kendo-button>
   </script>
   ``````
+
+  对于 kendo 命名 DisplayExtension.cs
+  对于 Enum  命名 ListBuilder.cs
+  对于标识栏 命名 zh-cn, App_Dict + Scripts/lang/dict.js
+  改了一通，不知道怎么回事就过了...
+
+> Debug: [Debug.WriteLine 方法 (System.Diagnostics) | Microsoft Learn](https://learn.microsoft.com/zh-cn/dotnet/api/system.diagnostics.debug.writeline?view=net-8.0)
+
+<br>
+<br>
+<br>
+
+# 新任务：加外键√，增添搜索条件√，
+
+# 多行编辑，DTO查询，增添提示确认方式
+
+1. 加外键 [SQL FOREIGN KEY 约束 | 菜鸟教程 (runoob.com)](https://www.runoob.com/sql/sql-foreignkey.html)
+2. 在外键的情况下，进行联动，通过 DORef 的 list 和 map 可以在第二个表中选取第一个表中的对象，BD需要提前获取RefList，否则下拉的时候无法找到 List
+
+   ```cs
+   public ActionResult Edit(int Id) {
+       var m = new CustomerEditVM()
+       {
+           UserList = UserBD.GetRefList()
+       };
+       m.Input = CustomerBD.GetDto<CustomerEditVM.EditInput>(Id);
+       return ForView(m);
+   }
+   ```
+3.
+4. 确认方式 AjaxSubmit内置确认
+
+   ```js
+       c.AjaxSubmit('c.frmEdit', null, { confirm: '' }, function (r) {
+           if (r.IsNoop) {
+               pb.AjaxNavBack();
+           }
+       });
+   ```
+   确认方式 pbui.Confirm
+
+   ```js
+       c.Delete_click = function (id, name) {
+           pbui.Confirm('ConfirmDelete', name).then(confirmed => {
+               if (confirmed) {
+                   c.AjaxSubmit('c.frmSearch', 'Id=' + id, {url: 'Delete'}, function (r) {
+                       c.grdCustomer.Bind(r.data);
+                   });
+               }
+           });
+       };
+   ```

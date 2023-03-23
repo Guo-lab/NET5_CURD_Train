@@ -1,4 +1,6 @@
 def.ns = "/TR/Task_List/";
+
+
 def.ContentState('ListByDate').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
     var c = pb.Super(this, serverVm, $scope);
 
@@ -13,6 +15,8 @@ def.ContentState('ListByDate').Controller(['pb', 'serverVm', '$scope', function 
        // c.grdTask.AjaxRead();
     };
 }]);
+
+
 def.ContentState('ApprovedList').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
     var c = pb.Super(this, serverVm, $scope);
 }]);

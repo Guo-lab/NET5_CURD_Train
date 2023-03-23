@@ -1,6 +1,10 @@
 def.ns = "/TR/Task_Info/";
 
 
+
+
+
+
 def.ContentState('List').Controller(['pb', 'serverVm', '$scope','pbui', function (pb, serverVm, $scope,pbui) {
     var c = pb.Super(this, serverVm, $scope);
 
@@ -15,7 +19,15 @@ def.ContentState('List').Controller(['pb', 'serverVm', '$scope','pbui', function
                 });
             }
         });
-        c.AjaxSubmit('c.frmSearch', 'Id=' + id, { url: 'Delete', confirm: 'ConfirmDelete', confirmMulti: c.vm.Input.ListInput.SelectedValues }, function (r) {
+        c.AjaxSubmit(
+            'c.frmSearch',
+            'Id=' + id,
+            {
+                url: 'Delete',
+                confirm: 'ConfirmDelete',
+                confirmMulti: c.vm.Input.ListInput.SelectedValues
+            },
+            function (r) {
             c.grdTask.Bind(r.data);
         });
     };
@@ -23,6 +35,19 @@ def.ContentState('List').Controller(['pb', 'serverVm', '$scope','pbui', function
         c.Search_click();
     };
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def.ContentState('Edit', 'Id').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
@@ -59,7 +84,17 @@ def.ContentState('Edit', 'Id').Controller(['pb', 'serverVm', '$scope', function 
 }]);
 
 
+
+
+
+
+
 def.ContentState('Add').WithController('Edit');
+
+
+
+
+
 
 
 def.ContentState('MultiEdit').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {

@@ -16,6 +16,13 @@
                 @Html.KendoNumericBoxFor(m => m.Input.Gender)
             </div>
 
+
+            <div class="e2-col-lg-3 e2-col-md-3 e2-col-sm-3 e2-col-xs-3">
+                @Html.NgLabelFor(m => m.Input.User)
+                @Html.KendoDropDownListFor(m => m.Input.User).DataSource("c.vm.UserList").OptionLabel()
+            </div>
+
+
             <div class="e2-col-lg-2 e2-col-md-8 e2-col-sm-8 e2-col-xs-8">
                 <kendo-button type="button" ng-click="c.Search_click()" icon="'k-icon k-i-search'">
                     <span translate="Search"></span>
@@ -29,28 +36,53 @@
         <!-- kendo-grid 控件 pb-kendo-grid为kendogrid绑定数据。该指令值为绑定的数据，通常是c.vm.该指令将绑定数据的ResultList属性和Input.ListInput属性关联到kendogrid的行数据、分页数据、排序数据上 同时支持页面跳转回来时保持这些表格状态 -->
         <!-- pb-kendo-grid-cols 列设置-->
         <!-- OT 表示使用模板且模板名称为固定的 Operation-template -->
-        <table kendo-grid="c.grdUser" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+        <table kendo-grid="c.grdCustomer" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
                pb-kendo-grid-cols="[
                    'Email',
                    'Name_,T,70px|{style: \'text-align: center;background-color:lightgreen\'}',
+                   'User,|Display',
                    'Gender,,80px',
-                   'RegisterDate',
+                   'RegisterDate,|Display',
                    'Spending',
-                   'Vip',
-                   'Active',
+                   'Vip,|Display:\'Customer_RankEnum\'',
+                   'Active,|Display',
                    ',OT',
-               ]"  
+                   { command:[
+                       { name:'edit', visible:IsActive },
+                       { text:'Delete', 
+                         name:'Delete', 
+                         iconClass:'delete',                   
+                         click:c.btnDelete_Click, 
+                         visible:c.currencyIsActive
+                       },
+                       { text:'Restore', 
+                         name: 'Restore',
+                         iconClass:'undo',
+                         click:c.btnRestore_Click,
+                         visible:c.currencyIsActive
+                        },
+                     ],
+                     width: 160, 
+                     attributes: { style: 'text-align: center' }
+                   }
+               ]"
                class="myTable">
+            <!-- Display相关:  Display可自适应多种类型，个别情况下，也可以使用更具体的pipe.
+                     1.Dict用于枚举类型的文本显示时要指定枚举类型名
+                     2.Display用于显示数字时，可指定小数位数，缺省为2
+            -->
             <!--Table 内本地化字段名显示文本时 key 值规范为表名加下划线加字段名 -->
             <thead>
                 <tr>
                     <th class="tableth"><span translate="Customer_Email"></span></th>
                     <th class="tableth"><span translate="Customer_Name_"></span></th>
+                    <th class="tableth"><span translate="Customer_User"></span></th>
                     <th class="tableth"><span translate="Customer_Gender"></span></th>
                     <th class="tableth"><span translate="Customer_RegisterDate"></span></th>
                     <th class="tableth"><span translate="Customer_Spending"></span></th>
                     <th class="tableth"><span translate="Customer_Vip"></span></th>
                     <th class="tableth"><span translate="Customer_Active"></span></th>
+                    <th class="tableth"></th>
                     <th class="tableth"></th>
                 </tr>
             </thead>

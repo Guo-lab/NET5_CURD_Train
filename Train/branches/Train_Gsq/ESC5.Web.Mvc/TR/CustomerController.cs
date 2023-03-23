@@ -13,6 +13,11 @@ using ESC5.Common.ViewModel.TR;
 using ESC5.Domain.DomainModel.TR;
 using ESC5.WebCommon;
 
+using SharpArch.NHibernate;
+using ProjectBase.Dto;
+using ProjectBase.Domain.Transaction;
+
+
 
 
 namespace ESC5.Web.Mvc.TR
@@ -23,9 +28,16 @@ namespace ESC5.Web.Mvc.TR
     public class CustomerController : AppBaseController
     {
         public ICommonBD<Customer, int> CustomerBD { get; set; }
+        // -------- Search User --------
+        public ICommonBD<User, int> UserBD { get; set; }
+        // -----------------------------
         public ActionResult List()
         {
-            var vm = new CustomerListVM();
+            var vm = new CustomerListVM()
+            {
+                // FK User get DORef IList from UserBD 
+                UserList = UserBD.GetRefList()
+            };
             vm.ResultList = GetResultList(vm.Input);
             // ProjectBase BaseController
             return ForView(vm);
@@ -47,12 +59,17 @@ namespace ESC5.Web.Mvc.TR
             {
                 filter = filter.And(o => o.Gender == input.Gender);
             }
+            if (input.User?.Id != null)
+            {
+                filter = filter.And(o => o.User!.Id == input.User.Id);
+            }
             var list = CustomerBD.GetDtoList<CustomerListVM.ListRow>(
+                q => q.Distinct(),
                 input.ListInput.Pager,
                 filter,
                 input.ListInput.OrderExpression
             );
-            // 返回DTO类型元素集合
+            // 返回DTO类型元素集合, <list.MergeList();>
             return list;
         }
 
@@ -69,27 +86,33 @@ namespace ESC5.Web.Mvc.TR
         }
 
 
-
+        // -----------------------------------------------
+        // List Reference
         public ActionResult Add()
         {
-            var m = new CustomerEditVM();
-            return ForView(m);
-        }
-
-        public ActionResult Edit(int Id)
-        {
-            var m = new CustomerEditVM
+            var m = new CustomerEditVM()
             {
-                // 直接从数据库取DTO数据
-                Input = CustomerBD.GetDto<CustomerEditVM.EditInput>(Id)
+                UserList = UserBD.GetRefList()
             };
             return ForView(m);
         }
 
+        // UserList = UserBD.GetRefList() need to be passed
+        public ActionResult Edit(int Id)
+        {
+            var m = new CustomerEditVM()
+            {
+                UserList = UserBD.GetRefList()
+            };
+            m.Input = CustomerBD.GetDto<CustomerEditVM.EditInput>(Id);
+            return ForView(m);
+        }
+        // ------------------------------------------------
+
 
 
         [HttpPost]
-        [Transaction]
+        [Transaction(System.Data.IsolationLevel.ReadUncommitted)]
         public ActionResult Save([Validate] CustomerEditVM.EditInput input) // 对输入数据进行服务器端验证需加标记Validate.只有验证通过才会进入Action，否则自动返回错误信息
         {
             Customer customer;
@@ -108,6 +131,9 @@ namespace ESC5.Web.Mvc.TR
             customer.Spending = input.Spending;
             customer.Vip = input.Vip;
             customer.Active = input.Active;
+
+            customer.User = input.User?.ToReferencedDO(UserBD);
+
 
             CustomerBD.Save(customer); // 调用BD的方法执行业务逻辑（数据库约束错误会被自动处理）
 

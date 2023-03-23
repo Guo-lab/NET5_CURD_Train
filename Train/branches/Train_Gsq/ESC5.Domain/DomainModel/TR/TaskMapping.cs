@@ -4,9 +4,6 @@ using NHibernate.Mapping.ByCode.Conformist;
 using ProjectBase.Domain.NhibernateMapByCode;
 
 
-
-
-
 namespace ESC5.Domain.DomainModel.RS
 {
     /// <summary>

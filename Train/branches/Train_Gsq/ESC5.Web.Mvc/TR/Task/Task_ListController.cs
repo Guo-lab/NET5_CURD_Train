@@ -71,6 +71,10 @@ namespace ESC5.Web.Mvc.TR
         }
 
 
+
+
+
+
         //----------------以下部分不是培训。仅用于研究
         #region "非示例代码。test insert 性能"
         [Transaction]
