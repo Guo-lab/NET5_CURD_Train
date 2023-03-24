@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    
+    @using (Html.KendoForm("c.frmSearch", "SearchByApproved"))
+      js 没有 c.frmSearcch
+
+    还有 Edit 是因为 router ""Customer/" 一致，并未分隔开
+*@
+
+@model CustomerList_ListApprovedVM
+
+@using (Html.KendoForm("c.frmSearch", "ListApproved"))
+{
+    <div style="margin-top:5px;">
+        <table kendo-grid="c.grdCustomer" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+               pb-kendo-grid-cols="[
+            'Email',
+            'Name_,T,80px',
+            'User,|Display',
+            'Gender',
+            'RegisterDate,|Display',
+            'Spending',
+            'Vip,|Display:\'Customer_RankEnum\'',
+            'Active,|Display',
+        ]" pb-kendo-grid-options="{toolbarTpl:false}" class="myTable">
+            <thead>
+                <tr>
+                    <th class="tableth"><span translate="Customer_Email"></span></th>
+                    <th class="tableth"><span translate="Customer_Name_"></span></th>
+                    <th class="tableth"><span translate="Customer_User"></span></th>
+                    <th class="tableth"><span translate="Customer_Gender"></span></th>
+                    <th class="tableth"><span translate="Customer_RegisterDate"></span></th>
+                    <th class="tableth"><span translate="Customer_Spending"></span></th>
+                    <th class="tableth"><span translate="Customer_Vip"></span></th>
+                    <th class="tableth"><span translate="Customer_Active"></span></th>
+                </tr>
+            </thead>
+        </table>
+        <script Id="Name-template" type="text/x-kendo-template">
+                    <a class="a-link" @Url.State("forward:Edit(id:#=Id#)")>#=Name_#</a>
+        </script>
+    </div>
+}

@@ -1,152 +1,260 @@
-2023-03-23 17:10:02,056 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - NHibernate 5.3.8+96a9af7a83ee697eb1f62a915f8da80a8eaca197 (assembly 5.3.0.0)
+2023-03-24 12:14:11,046 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - NHibernate 5.3.8+96a9af7a83ee697eb1f62a915f8da80a8eaca197 (assembly 5.3.0.0)
 
-2023-03-23 17:10:02,139 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - hibernate-configuration section not found in application configuration file
+2023-03-24 12:14:11,179 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - hibernate-configuration section not found in application configuration file
 
-2023-03-23 17:10:02,144 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Bytecode provider name : lcg
+2023-03-24 12:14:11,185 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Bytecode provider name : lcg
 
-2023-03-23 17:10:02,147 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Objects factory class : NHibernate.Bytecode.ActivatorObjectsFactory
+2023-03-24 12:14:11,190 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Objects factory class : NHibernate.Bytecode.ActivatorObjectsFactory
 
-2023-03-23 17:10:02,150 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using reflection optimizer
+2023-03-24 12:14:11,194 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using reflection optimizer
 
-2023-03-23 17:10:02,473 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Customer -> TR_Customer
+2023-03-24 12:14:11,518 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Customer -> TR_Customer
 
-2023-03-23 17:10:02,526 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Task -> TR_Task
+2023-03-24 12:14:11,563 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.Task -> TR_Task
 
-2023-03-23 17:10:02,540 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.TaskItem -> TR_TaskItem
+2023-03-24 12:14:11,579 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.TaskItem -> TR_TaskItem
 
-2023-03-23 17:10:02,544 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.User -> TR_User
+2023-03-24 12:14:11,583 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Mapping class: ESC5.Domain.DomainModel.TR.User -> TR_User
 
-2023-03-23 17:10:02,562 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-24 12:14:11,598 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-23 17:10:02,602 [1] INFO NHibernate.Log4NetLogger.Info(:0) - checking mappings queue
+2023-03-24 12:14:11,635 [1] INFO NHibernate.Log4NetLogger.Info(:0) - checking mappings queue
 
-2023-03-23 17:10:02,607 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-many association mappings
+2023-03-24 12:14:11,639 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-many association mappings
 
-2023-03-23 17:10:02,615 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - mapping collection: ESC5.Domain.DomainModel.TR.Task.TaskItems -> TR_TaskItem
+2023-03-24 12:14:11,647 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - mapping collection: ESC5.Domain.DomainModel.TR.Task.TaskItems -> TR_TaskItem
 
-2023-03-23 17:10:02,625 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-one association property references
+2023-03-24 12:14:11,653 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing one-to-one association property references
 
-2023-03-23 17:10:02,628 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing foreign key constraints
+2023-03-24 12:14:11,662 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing foreign key constraints
 
-2023-03-23 17:10:02,641 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing filters (second pass)
+2023-03-24 12:14:11,677 [1] INFO NHibernate.Log4NetLogger.Info(:0) - processing filters (second pass)
 
-2023-03-23 17:10:02,652 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+2023-03-24 12:14:11,687 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
 
-2023-03-23 17:10:02,686 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+2023-03-24 12:14:11,715 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
 
-2023-03-23 17:10:02,692 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
+2023-03-24 12:14:11,719 [1] WARN NHibernate.Log4NetLogger.WarnFormat(:0) - NHibernate.Type.TimestampType (Timestamp) is obsolete. Please use DateTimeType instead.
 
-2023-03-23 17:10:02,704 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-24 12:14:11,731 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-23 17:10:02,752 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-24 12:14:11,762 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-23 17:10:02,832 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using dialect defined converter
+2023-03-24 12:14:11,904 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Using dialect defined converter
 
-2023-03-23 17:10:02,835 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Generate SQL with comments: disabled
+2023-03-24 12:14:11,911 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Generate SQL with comments: disabled
 
-2023-03-23 17:10:02,838 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2023-03-24 12:14:11,914 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
 
-2023-03-23 17:10:02,843 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Configuring ConnectionProvider
+2023-03-24 12:14:11,919 [1] INFO NHibernate.Log4NetLogger.Info(:0) - Configuring ConnectionProvider
 
-2023-03-23 17:10:02,847 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2023-03-24 12:14:11,927 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using dialect: NHibernate.Dialect.MsSql2008Dialect
 
-2023-03-23 17:10:02,850 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
+2023-03-24 12:14:11,932 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory
 
-2023-03-23 17:10:02,853 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Optimize cache for minimal puts: False
+2023-03-24 12:14:11,938 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Optimize cache for minimal puts: False
 
-2023-03-23 17:10:02,856 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Connection release mode: auto
+2023-03-24 12:14:11,943 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Connection release mode: auto
 
-2023-03-23 17:10:02,859 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default schema: Train_Gsq.dbo
+2023-03-24 12:14:11,946 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default schema: Train_Gsq.dbo
 
-2023-03-23 17:10:02,862 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default batch fetch size: 1
+2023-03-24 12:14:11,949 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default batch fetch size: 1
 
-2023-03-23 17:10:02,864 [1] INFO NHibernate.Log4NetLogger.Info(:0) - echoing all SQL to stdout
+2023-03-24 12:14:11,951 [1] INFO NHibernate.Log4NetLogger.Info(:0) - echoing all SQL to stdout
 
-2023-03-23 17:10:02,867 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Statistics: disabled
+2023-03-24 12:14:11,954 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Statistics: disabled
 
-2023-03-23 17:10:02,870 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Deleted entity synthetic identifier rollback: disabled
+2023-03-24 12:14:11,957 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Deleted entity synthetic identifier rollback: disabled
 
-2023-03-23 17:10:02,873 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2023-03-24 12:14:11,961 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
 
-2023-03-23 17:10:02,877 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query provider: NHibernate.Linq.DefaultQueryProvider
+2023-03-24 12:14:11,965 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query provider: NHibernate.Linq.DefaultQueryProvider
 
-2023-03-23 17:10:02,881 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query language substitutions: {'true'='1', 'false'='0'}
+2023-03-24 12:14:11,971 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Query language substitutions: {'true'='1', 'false'='0'}
 
-2023-03-23 17:10:02,887 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2023-03-24 12:14:11,977 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
 
-2023-03-23 17:10:02,892 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL inserts for batching: enabled
+2023-03-24 12:14:11,981 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL inserts for batching: enabled
 
-2023-03-23 17:10:02,895 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL updates for batching: disabled
+2023-03-24 12:14:11,984 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Order SQL updates for batching: disabled
 
-2023-03-23 17:10:02,899 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Batcher factory: NHibernate.AdoNet.GenericBatchingBatcherFactory, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2023-03-24 12:14:11,987 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Batcher factory: NHibernate.AdoNet.GenericBatchingBatcherFactory, NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
 
-2023-03-23 17:10:02,902 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using Isolation Level: ReadCommitted
+2023-03-24 12:14:11,991 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Using Isolation Level: ReadCommitted
 
-2023-03-23 17:10:02,906 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default flush mode: Auto
+2023-03-24 12:14:11,995 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Default flush mode: Auto
 
-2023-03-23 17:10:02,910 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Named query checking : enabled
+2023-03-24 12:14:11,998 [1] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - Named query checking : enabled
 
-2023-03-23 17:10:02,936 [1] INFO NHibernate.Log4NetLogger.Info(:0) - building session factory
+2023-03-24 12:14:12,017 [1] INFO NHibernate.Log4NetLogger.Info(:0) - building session factory
 
-2023-03-23 17:10:03,408 [1] INFO NHibernate.Log4NetLogger.Info(:0) - no name configured
+2023-03-24 12:14:12,488 [1] INFO NHibernate.Log4NetLogger.Info(:0) - no name configured
 
-2023-03-23 17:10:07,644 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Id (Class)]
+2023-03-24 12:14:19,739 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Id (Class)]
 
-2023-03-23 17:10:07,661 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Id (Class)]
+2023-03-24 12:14:19,785 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Id (Class)]
 
-2023-03-23 17:10:07,665 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> RefText (Class)]
+2023-03-24 12:14:19,791 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> RefText (Class)]
 
-2023-03-23 17:10:07,668 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> RefText (Class)]
+2023-03-24 12:14:19,795 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> RefText (Class)]
 
-2023-03-23 17:10:07,680 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Name (Class)]
+2023-03-24 12:14:19,805 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (o) -> Name (Class)]
 
-2023-03-23 17:10:08,133 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - attempting to resolve property [integer] as a non-qualified ref
+2023-03-24 12:14:20,262 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - attempting to resolve property [integer] as a non-qualified ref
 
-2023-03-23 17:10:08,236 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> User (Class)]
+2023-03-24 12:14:20,378 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> User (Class)]
 
-2023-03-23 17:10:08,244 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
+2023-03-24 12:14:20,386 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
 
-2023-03-23 17:10:08,247 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
+2023-03-24 12:14:20,391 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
 
-2023-03-23 17:10:08,250 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Email (Class)]
+2023-03-24 12:14:20,394 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Email (Class)]
 
-2023-03-23 17:10:08,254 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Email (Class)]
+2023-03-24 12:14:20,398 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Email (Class)]
 
-2023-03-23 17:10:08,257 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Name_ (Class)]
+2023-03-24 12:14:20,402 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Name_ (Class)]
 
-2023-03-23 17:10:08,260 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Name_ (Class)]
+2023-03-24 12:14:20,406 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Name_ (Class)]
 
-2023-03-23 17:10:08,278 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> User (Class)]
+2023-03-24 12:14:20,410 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> User (Class)]
 
-2023-03-23 17:10:08,283 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
+2023-03-24 12:14:20,416 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
 
-2023-03-23 17:10:08,286 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
+2023-03-24 12:14:20,420 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Id (Class)]
 
-2023-03-23 17:10:08,290 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> User (Class)]
+2023-03-24 12:14:20,424 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> User (Class)]
 
-2023-03-23 17:10:08,293 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+2023-03-24 12:14:20,429 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
 
-2023-03-23 17:10:08,296 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+2023-03-24 12:14:20,433 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
 
-2023-03-23 17:10:08,299 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Gender (Class)]
+2023-03-24 12:14:20,437 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Gender (Class)]
 
-2023-03-23 17:10:08,302 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Gender (Class)]
+2023-03-24 12:14:20,442 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Gender (Class)]
 
-2023-03-23 17:10:08,306 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> RegisterDate (Class)]
+2023-03-24 12:14:20,446 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> RegisterDate (Class)]
 
-2023-03-23 17:10:08,309 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> RegisterDate (Class)]
+2023-03-24 12:14:20,450 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> RegisterDate (Class)]
 
-2023-03-23 17:10:08,312 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Spending (Class)]
+2023-03-24 12:14:20,455 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Spending (Class)]
 
-2023-03-23 17:10:08,315 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Spending (Class)]
+2023-03-24 12:14:20,466 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Spending (Class)]
 
-2023-03-23 17:10:08,318 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Vip (Class)]
+2023-03-24 12:14:20,471 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Vip (Class)]
 
-2023-03-23 17:10:08,321 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Vip (Class)]
+2023-03-24 12:14:20,480 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Vip (Class)]
 
-2023-03-23 17:10:08,324 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Active (Class)]
+2023-03-24 12:14:20,484 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Active (Class)]
 
-2023-03-23 17:10:08,328 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Active (Class)]
+2023-03-24 12:14:20,488 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Active (Class)]
 
-2023-03-23 17:10:08,333 [5] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Name_ (Class)]
+2023-03-24 12:14:20,493 [4] INFO NHibernate.Log4NetLogger.InfoFormat(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (f) -> Name_ (Class)]
+
+2023-03-24 12:14:21,598 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-24 12:14:21,602 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> RegisterDate (Class)]
+
+2023-03-24 12:14:21,618 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:21,621 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:21,625 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:21,628 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Email (Class)]
+
+2023-03-24 12:14:21,632 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Email (Class)]
+
+2023-03-24 12:14:21,635 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Name_ (Class)]
+
+2023-03-24 12:14:21,639 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Name_ (Class)]
+
+2023-03-24 12:14:21,647 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:21,651 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:21,654 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:21,658 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:21,662 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-24 12:14:21,665 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-24 12:14:21,669 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Gender (Class)]
+
+2023-03-24 12:14:21,673 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Gender (Class)]
+
+2023-03-24 12:14:21,678 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> RegisterDate (Class)]
+
+2023-03-24 12:14:21,682 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> RegisterDate (Class)]
+
+2023-03-24 12:14:21,685 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Spending (Class)]
+
+2023-03-24 12:14:21,690 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Spending (Class)]
+
+2023-03-24 12:14:21,694 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Vip (Class)]
+
+2023-03-24 12:14:21,698 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Vip (Class)]
+
+2023-03-24 12:14:21,702 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Active (Class)]
+
+2023-03-24 12:14:21,705 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Active (Class)]
+
+2023-03-24 12:14:21,709 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> RegisterDate (Class)]
+
+2023-03-24 12:14:21,713 [5] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Name_ (Class)]
+
+2023-03-24 12:14:23,398 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - attempting to resolve property [integer] as a non-qualified ref
+
+2023-03-24 12:14:23,406 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:23,430 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:23,434 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:23,437 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:23,441 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Email (Class)]
+
+2023-03-24 12:14:23,445 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Email (Class)]
+
+2023-03-24 12:14:23,449 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Name_ (Class)]
+
+2023-03-24 12:14:23,452 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Name_ (Class)]
+
+2023-03-24 12:14:23,456 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:23,459 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:23,463 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Id (Class)]
+
+2023-03-24 12:14:23,467 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:23,470 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-24 12:14:23,475 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.User (_0) -> RefText (Class)]
+
+2023-03-24 12:14:23,480 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Gender (Class)]
+
+2023-03-24 12:14:23,486 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Gender (Class)]
+
+2023-03-24 12:14:23,489 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> RegisterDate (Class)]
+
+2023-03-24 12:14:23,494 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> RegisterDate (Class)]
+
+2023-03-24 12:14:23,497 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Spending (Class)]
+
+2023-03-24 12:14:23,501 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Spending (Class)]
+
+2023-03-24 12:14:23,504 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Vip (Class)]
+
+2023-03-24 12:14:23,508 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Vip (Class)]
+
+2023-03-24 12:14:23,512 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Active (Class)]
+
+2023-03-24 12:14:23,516 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Active (Class)]
+
+2023-03-24 12:14:23,519 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> User (Class)]
+
+2023-03-24 12:14:23,523 [8] INFO NHibernate.NHibernateLoggerExtensions.Info(:0) - handling property dereference [ESC5.Domain.DomainModel.TR.Customer (o) -> Name_ (Class)]
 

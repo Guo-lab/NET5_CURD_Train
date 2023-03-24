@@ -103,6 +103,10 @@ namespace ESC5.Common.ViewModel.TR
 
             [VmInner(nameof(ValGender))] // public bool Val later
             public int Gender { get; set; }
+
+
+            //[Max("2099-03-01")]
+            //[VmInner(nameof(ValDate))]
             public DateTime? RegisterDate { get; set; }
             public decimal Spending { get; set; }
 
@@ -118,6 +122,10 @@ namespace ESC5.Common.ViewModel.TR
             {
                 return Gender > -1;
             }
+            //public bool ValDate()
+            //{
+
+            //}
         }
     }
 

@@ -1,3 +1,4 @@
+// dir Customer
 def.ns = "/TR/Customer/";
 
 
@@ -52,5 +53,47 @@ def.ContentState('List').Controller(['pb', 'serverVm', '$scope', 'pbui', functio
         c.Search_click();
     };
 }]);
+
+
+
+
+
+// -------------------------------------------------------------
+// ---------------------- Other List Actions -------------------
+// -------------------------------------------------------------
+// ListByDate Defined in Controller 
+// A third VM
+def.ContentState('ListByDate').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
+    var c = pb.Super(this, serverVm, $scope);
+
+    c.Search_click = function () {
+        //c.CallAction('TestMultiInsert', null, function (r) {
+        //    console.log(r.data);
+        //});TestMultiInsertStateless  TestMultiInsertAssignId
+        //c.CallAction('TestMultiInsert', null, function (r) {
+        //    console.log(r.data);
+        //});
+
+        c.grdCustomer.AjaxRead();
+    };
+
+    c.OnNavBackRefresh = function () {
+        c.Search_click();
+    };
+}]);
+
+// ListApproved
+def.ContentState('ListApproved').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
+    var c = pb.Super(this, serverVm, $scope);
+
+    c.Search_click = function () {
+        c.grdCustomer.AjaxRead();
+    };
+
+    c.OnNavBackRefresh = function () {
+        c.Search_click();
+    };
+}]);
+
 
 

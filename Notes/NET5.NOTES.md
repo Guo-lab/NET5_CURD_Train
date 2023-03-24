@@ -108,7 +108,7 @@
 
 # 新任务：加外键√，增添搜索条件√，
 
-# 多行编辑，DTO查询，增添提示确认方式
+# 多行编辑，DTO查询，增添提示确认方式√
 
 1. 加外键 [SQL FOREIGN KEY 约束 | 菜鸟教程 (runoob.com)](https://www.runoob.com/sql/sql-foreignkey.html)
 2. 在外键的情况下，进行联动，通过 DORef 的 list 和 map 可以在第二个表中选取第一个表中的对象，BD需要提前获取RefList，否则下拉的时候无法找到 List
@@ -123,8 +123,18 @@
        return ForView(m);
    }
    ```
-3.
-4. 确认方式 AjaxSubmit内置确认
+3. 添加清单视图
+
+   > razor [ASP.NET Core 的 Razor 语法参考 | Microsoft Learn](https://learn.microsoft.com/zh-cn/aspnet/core/mvc/views/razor?view=aspnetcore-6.0) 和 cshtml 是服务器解析
+   > js 是客户端解析
+   >
+
+   添加 VM， 对应上新加的 cshtml
+   cshtml 的 @using (Html.KendoForm("c.frmSearch", "SearchByApproved")) 需要与 Controller 中负责处理查询按键一致
+
+   ContentState 对应上 Controller 的初始化函数
+   其中的对应关系在于 服务器 razor 与 js 客户端
+5. 确认方式 AjaxSubmit内置确认
 
    ```js
        c.AjaxSubmit('c.frmEdit', null, { confirm: '' }, function (r) {
