@@ -8,9 +8,16 @@ def.ContentState('ListByDate').Controller(['pb', 'serverVm', '$scope', function 
         //c.CallAction('TestMultiInsert', null, function (r) {
         //    console.log(r.data);
         //});TestMultiInsertStateless  TestMultiInsertAssignId
-        c.CallAction('TestMultiInsert', null, function (r) {
+
+        //c.CallAction('TestMultiInsert', null, function (r) {
+        //    console.log(r.data);
+        //});
+
+        c.CallAction('TestMultiDelete', null, function (r) {
             console.log(r.data);
         });
+        
+        // 00:00:00.4066871
         
        // c.grdTask.AjaxRead();
     };

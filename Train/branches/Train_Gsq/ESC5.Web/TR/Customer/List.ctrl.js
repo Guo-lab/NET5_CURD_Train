@@ -74,7 +74,7 @@ def.ContentState('ListByDate').Controller(['pb', 'serverVm', '$scope', function 
         //    console.log(r.data);
         //});
 
-        c.grdCustomer.AjaxRead();
+        c.grdCustomer3.AjaxRead();
     };
 
     c.OnNavBackRefresh = function () {
@@ -87,7 +87,7 @@ def.ContentState('ListApproved').Controller(['pb', 'serverVm', '$scope', functio
     var c = pb.Super(this, serverVm, $scope);
 
     c.Search_click = function () {
-        c.grdCustomer.AjaxRead();
+        c.grdCustomer2.AjaxRead();
     };
 
     c.OnNavBackRefresh = function () {
@@ -97,3 +97,6 @@ def.ContentState('ListApproved').Controller(['pb', 'serverVm', '$scope', functio
 
 
 
+def.ContentState('SectionedInfo').Controller(['pb', 'serverVm', '$scope', function (pb, serverVm, $scope) {
+    var c = pb.Super(this, serverVm, $scope);
+}]);

@@ -105,7 +105,6 @@ namespace ESC5.Web.Mvc.TR
                     if (i == 0)
                     {
                         //  TransactionHelper.FlushAndClearSession();
-
                         // session.Flush();
                         // session.Clear();
                     }
@@ -115,6 +114,34 @@ namespace ESC5.Web.Mvc.TR
 
             return RcJson(DateTime.Now - begin);
         }
+
+
+        // -------------------- Delete -----------------
+        [Transaction]
+        public ActionResult TestMultiDelete()
+        {
+            var session = NHibernateSession.Current;
+            var begin = DateTime.Now;
+            var start = 1000;
+            for (var k = 1; k <= 50; k++)
+            {
+                for (var i = 0; i <= 9; i++)
+                {
+                    var task = new Task()
+                    {
+                        Name = (start + i + k * 10).ToString(),
+                    };
+                    TaskBD.Delete(o => o.Name == task.Name);
+                    TaskBD.Refresh(task);
+                }
+            }
+            return RcJson(DateTime.Now - begin);
+        }
+
+
+
+
+
 
         [Transaction]
         public ActionResult TestMultiInsertAssignId()

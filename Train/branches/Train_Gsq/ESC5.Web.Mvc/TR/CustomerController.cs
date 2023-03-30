@@ -16,7 +16,7 @@ using ESC5.WebCommon;
 using SharpArch.NHibernate;
 using ProjectBase.Dto;
 using ProjectBase.Domain.Transaction;
-
+using System.Diagnostics;
 
 
 
@@ -137,10 +137,10 @@ namespace ESC5.Web.Mvc.TR
             customer.Active = input.Active;
 
             customer.User = input.User?.ToReferencedDO(UserBD);
-
+            customer.OtherGender = input.OtherGender;
 
             CustomerBD.Save(customer); // 调用BD的方法执行业务逻辑（数据库约束错误会被自动处理）
-
+            Debug.WriteLine(customer.Email, customer.Name_);
             if (input.Id == 0) return Noop(); // 对新增成功的可返回Noop结果（相当于void调用）。
             return SaveOk(); // 对保存成功的可返回服务器消息--保存成功
         }
@@ -202,6 +202,66 @@ namespace ESC5.Web.Mvc.TR
                 filter,
                 input.ListInput.OrderExpression
             );
+        }
+
+
+
+
+        // multi-line Operation
+        public ActionResult MultiEdit()
+        {
+            var m = new CustomerMultiEditVM
+            {
+                UserList = UserBD.GetRefList()
+            };
+            m.Input.Rows.Add(new CustomerEditVM.EditInput());
+            // two modules to edit input
+            m.Input.Rows.Add(new CustomerEditVM.EditInput());
+            return ForView(m);
+        }
+        public ActionResult MultiSave([Validate] CustomerMultiEditVM.MultiEditInput input)
+        {
+            //一般情况下即使多行一起编辑，也要每行一保存，不是多行一起保存。
+            //特殊情况下，才一起保存。比如子表记录少且不能独立于父表记录存在。
+            return Noop();
+        }
+
+
+
+
+
+
+        public ActionResult SectionedInfo()
+        {
+            // Utilized together with SelectorIgnore, SeletorMap
+            // Only one GetDto
+            var m_1 = CustomerBD.GetDto<CustomerSectionVM>(o => o.Name_ == "hhhaa");
+            
+            // have to be displayed 
+            var m_1_2 = CustomerBD.GetDto(
+                o => o.Email == "1@outlook.com",                 // row select
+                o => new CustomerSectionVM                       // col select
+                {
+                    Section_1 = new CustomerSectionVM.S1
+                    {
+                        Contact = o.Email,
+                        Name_ = o.Name_,
+                        Email = o.Email,
+                        Section_1_2 = new CustomerSectionVM.S2
+                        {
+                            RegisterDate = o.RegisterDate,
+                            Spending = o.Spending
+                        }
+                    },
+                    Section_2 = new CustomerSectionVM.S2
+                    {
+                        RegisterDate = o.RegisterDate,
+                        Spending = o.Spending
+                    }
+                }
+            );
+
+            return ForView(m_1_2);
         }
 
     }

@@ -12,7 +12,7 @@
 @using (Html.KendoForm("c.frmSearch", "ListApproved"))
 {
     <div style="margin-top:5px;">
-        <table kendo-grid="c.grdCustomer" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+        <table kendo-grid="c.grdCustomer2" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
                pb-kendo-grid-cols="[
             'Email',
             'Name_,T,80px',
@@ -36,7 +36,7 @@
                 </tr>
             </thead>
         </table>
-        <script Id="Name-template" type="text/x-kendo-template">
+        <script Id="Name_-template" type="text/x-kendo-template">
                     <a class="a-link" @Url.State("forward:Edit(id:#=Id#)")>#=Name_#</a>
         </script>
     </div>

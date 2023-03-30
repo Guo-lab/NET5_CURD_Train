@@ -15,6 +15,9 @@ using ProjectBase.Domain;
 using System.Linq.Expressions;
 using ProjectBase.Dto;
 
+using static ESC5.Common.ViewModel.TR.CustomerEditVM;
+
+
 
 namespace ESC5.Common.ViewModel.TR
 {
@@ -72,8 +75,6 @@ namespace ESC5.Common.ViewModel.TR
 
 
 
-
-
     [Bind("Input")]
     public class CustomerList_ListApprovedVM
     {
@@ -89,6 +90,11 @@ namespace ESC5.Common.ViewModel.TR
             public decimal Spending { get; set; }
             public Customer.RankEnum Vip { get; set; }
             public bool Active { get; set; }
+            // 多个SelectorMap的定义和使用:
+            // 1.如果多个Domain都会映射到同一个DTO，那么推荐在DTO中定义多个SelectorMap。如SelectorMap、SelectorMap1、SelectorMap2....使用时调用GetDtoList，只有SelectorMap是可缺省的，其它都必须作为参数传给GetDtoList。如: 
+            // GetDtoList()将采用DTO.SelectorMap
+            // GetDtoList(DTO.SelectorMap1)采用DTO.SelectorMap1。
+            // 2.特殊情况下，也可以在调用GetDtoList的同一代码块中定义SelectorMap.
             public static IDictionary<string, Expression<Func<Customer, object?>>>
                 SelectorMap = new Dictionary<string, Expression<Func<Customer, object?>>> {
                 {
@@ -110,6 +116,66 @@ namespace ESC5.Common.ViewModel.TR
             {
                 OrderExpression = SortStruc<Customer>.ToString(Customer.DefaultSort)
             };
+        }
+    }
+
+
+
+
+    // 多行编辑 验证
+    [Bind("Input")]
+    public class CustomerMultiEditVM
+    {
+        public MultiEditInput Input { get; set; } = new();
+        public IList<DORef<User, int>> UserList { get; set; }
+        // 辅助输入行
+        public EditInput DummyRow { get; set; }
+
+        public class MultiEditInput
+        {
+            public IList<EditInput> Rows { get; set; } = new List<EditInput>();
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+    public class CustomerSectionVM
+    {
+        [SelectorCascade]
+        public S1 Section_1 { get; set; }
+        [SelectorCascade]
+        public S2 Section_2 { get; set; }
+
+        public decimal Spending { get; set; }
+
+        public class S1
+        {
+            //public string Code { get; set; }
+            //* Code can be mapped in SelectorMap Even it is not in Cutomer
+            public string Email { get; set; } 
+            public string Contact { get; set; }
+            public string Name_ { get; set; }
+            [SelectorCascade]
+            public S2 Section_1_2 { get; set; }
+
+            // Code can be mapped
+            public static IDictionary<string, Expression<Func<Customer, object?>>> 
+                SelectorMap = new Dictionary<string, Expression<Func<Customer, object?>>> {
+                { nameof(Contact), o => o.Email }
+            };
+        }
+
+        public class S2
+        {
+            public DateTime? RegisterDate { get; set; }
+            public decimal Spending { get; set; }
         }
     }
 }

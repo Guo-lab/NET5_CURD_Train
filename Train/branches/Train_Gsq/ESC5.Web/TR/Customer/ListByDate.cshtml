@@ -2,6 +2,7 @@
 
 
 
+
 @using (Html.KendoForm("c.frmSearch", "SearchByDate"))
 {
     <div class="row">
@@ -18,7 +19,7 @@
         </div>
     </div>
     <div style="margin-top:5px;">
-        <table kendo-grid="c.grdCustomer" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
+        <table kendo-grid="c.grdCustomer3" k-data-source="DataSource" options="GridOptions" pb-kendo-grid="c.vm"
                pb-kendo-grid-cols="[
             'Email',
             'Name_,T,80px',
@@ -50,8 +51,11 @@
                     </kendo-button>
         </script>
 
-        <script Id="Name-template" type="text/x-kendo-template">
+        <script Id="Name_-template" type="text/x-kendo-template">
                     <a class="a-link" @Url.State("forward:Edit(id:#=Id#)")>#=Name_#</a>
         </script>
     </div>
 }
+
+
+

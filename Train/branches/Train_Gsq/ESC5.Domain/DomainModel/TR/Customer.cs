@@ -43,7 +43,7 @@ namespace ESC5.Domain.DomainModel.TR
 
 
         public virtual User? User { get; set; }
-
+        public virtual string? OtherGender { get; set; }
         #endregion
 
         #region "enums"

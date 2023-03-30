@@ -83,6 +83,15 @@
                     @Html.NgCheckBoxFor(m => m.Input.Active)
                 </td>
             </tr>
+
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.Input.OtherGender, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.Input.OtherGender)
+                </td>
+            </tr>
         </tbody>
 
     </table>

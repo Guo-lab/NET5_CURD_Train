@@ -1,0 +1,105 @@
+﻿@model CustomerMultiEditVM
+
+<!--two-->
+<div class="row" ng-repeat="item in c.vm.Input.Rows">
+    <!--Html.KendoFormArray("c.frmEdit", "Save")-->
+    @using (Html.KendoFormArray("c.frmEdit", "Save", new { DummyPrefix = "DummyRow", IndexedPrefix = "Input.Rows[{{$index}}]" }))
+    {
+    <div style="white-space: nowrap;">
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-save'" ng-click="c.Save_click($index)">
+                <span translate="Save"></span>
+            </kendo-button>
+        </div>
+        <div class="e2-col-lg-3" style="text-align:left;">
+            <kendo-button type="button" icon="'k-icon k-i-back'" ng-click="c.Back_click()">
+                <span translate="Back"></span>
+            </kendo-button>
+        </div>
+    </div>
+    @Html.NgHiddenFor(m => m.DummyRow.Id)
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.Email, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.DummyRow.Email)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.Name_, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.DummyRow.Name_)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.User, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDropDownListFor(m => m.DummyRow.User).DataSource("c.vm.UserList")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.Gender, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.DummyRow.Gender)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.RegisterDate, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDatePickerFor(m => m.DummyRow.RegisterDate)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.Spending, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoNumericBoxFor(m => m.DummyRow.Spending)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.Vip, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoDropDownListFor(m => m.DummyRow.Vip).Enum("Customer_RankEnum")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.Active, "e2-label")
+                </td>
+                <td>
+                    @Html.CheckBoxFor(m => m.DummyRow.Active)
+                    @Html.NgCheckBoxFor(m => m.DummyRow.Active)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.NgLabelFor(m => m.DummyRow.OtherGender, "e2-label")
+                </td>
+                <td>
+                    @Html.KendoTextBoxFor(m => m.DummyRow.OtherGender)
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+    }
+</div>
+<!--Multi Save-->
+<kendo-button type="button" icon="'k-icon k-i-save'" ng-click="c.MultiSave_click()">
+    <span translate="多行保存"></span>
+</kendo-button>
+

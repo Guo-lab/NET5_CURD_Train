@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ESC5.Common",
+    "\\ESC5.Common\\ViewModel",
+    "\\ESC5.Common\\ViewModel\\TR",
+    "\\ESC5.Domain",
+    "\\ESC5.Domain\\DomainModel",
+    "\\ESC5.Domain\\DomainModel\\TR",
+    "\\ESC5.Web",
+    "\\ESC5.Web\\TR",
+    "\\ESC5.Web\\TR\\Customer"
+  ],
+  "SelectedNode": "\\ESC5.Common\\ViewModel\\TR\\CustomerVM.cs",
+  "PreviewInSolutionExplorer": false
+}

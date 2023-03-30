@@ -118,7 +118,7 @@ def.ContentState('MultiEdit').Controller(['pb', 'serverVm', '$scope', function (
                 //return "FormDataInValid";
                 return null;
             }
-        });
+        },c);
     };
     c.Save_click = function (formIndex) {
         c.AjaxSubmit('c.frmEdit', null, { formIndex: formIndex}, function (r) {

@@ -12,6 +12,9 @@ using ProjectBase.Domain;
 using System.Linq.Expressions;
 using ProjectBase.Dto;
 
+using System.Diagnostics;
+
+
 namespace ESC5.Common.ViewModel.TR
 {
     [Bind("Input")]
@@ -54,6 +57,11 @@ namespace ESC5.Common.ViewModel.TR
             public decimal Score { get; set; }
             public Task.StatusEnum Status { get; set; }
             public bool Active { get; set; }
+
+            // 从Domain到VM的属性赋值，可以使用ISelfMapper(AutoMapper)，但反向赋值不可以。
+            // GetDtoList方法可以直接从数据库选取对应的数据向VM赋值。
+            // 
+            // 对于上面两种方法得到的VM，可能有部分属性为自动赋值，此时可以使用ISelfMerger来完成进一步赋值
             [SelectorIgnore]
             public string Haha { get; set; }
             [SelectorIgnore]
@@ -64,10 +72,12 @@ namespace ESC5.Common.ViewModel.TR
             public void Merge()
             {
                 Haha = "hahahaha" + Name;
+                Debug.WriteLine(Haha, "Haha in Merge");
             }
             public void Merge(BaseSelfMergerContext context)
             {
                 Haha = "hahahaha" + context.ToString();
+                Debug.WriteLine(Haha, "Haha in Merge Context");
             }
 
             public void MergeVar<TVariantSource>(TVariantSource src)
@@ -77,15 +87,20 @@ namespace ESC5.Common.ViewModel.TR
                 {
                     Hello = user.RefText;
                 }
+                Debug.WriteLine(Hello, "Hello in MergeVar");
             }
             public void Merge(string src)
             {
                 Hello = src+ "Merge";
+                Debug.WriteLine(Hello, "Hello in Merge");
             }
             public void MergeList(IEnumerable<string> src)
             {
                 HelloList = src.ToList();
+                Debug.WriteLine(HelloList, "HelloList"); // HelloList: System.Collections.Generic.List`1[System.String]
             }
+
+
 
             public static IDictionary<string, Expression<Func<Task, object?>>> SelectorMap = new Dictionary<string, Expression<Func<Task, object?>>> {
                 {nameof(Name),o=>o.Name.Substring(0,5)},

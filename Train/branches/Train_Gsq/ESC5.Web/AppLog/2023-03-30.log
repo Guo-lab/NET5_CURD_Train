@@ -1,0 +1,267 @@
+Source:BaseController.OnException
+Time:2023/3/30 10:42:37
+StackTrace:   at NHibernate.Dialect.MsSql2005DialectQueryPager.BuildFromClauseForPagingDistinctQuery(MsSqlSelectParser sqlQuery, SqlStringBuilder result)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageByLimitAndOffset(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageBy(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005Dialect.GetLimitString(SqlString queryString, SqlString offset, SqlString limit)
+   at NHibernate.Dialect.Dialect.GetLimitString(SqlString queryString, Nullable`1 offset, Nullable`1 limit, Parameter offsetParameter, Parameter limitParameter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.GetSqlStringWithLimitsIfNeeded(QueryWriter queryWriter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.EndQuery()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.selectStatement()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.statement()
+   at NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator.Generate()
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.DoCompile(IDictionary`2 replacements, Boolean shallow, String collectionRole)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, IASTNode ast, String queryIdentifier, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan.CreateTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan..ctor(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryPlanCache.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters)
+   at NHibernate.Impl.AbstractSessionImpl.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow)
+   at NHibernate.Impl.AbstractSessionImpl.CreateQuery(IQueryExpression queryExpression)
+   at NHibernate.Linq.DefaultQueryProvider.PrepareQuery(Expression expression, IQuery& query)
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteList[TResult](Expression expression)
+   at NHibernate.Linq.NhQueryable`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ProjectBase.Data.BaseNHibernateLinqDaoWithTypedId`2.GetProjectionByQuery[TResult](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, SortStruc`1[] sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Data\BaseNHibernateLinqDao.cs:line 148
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 345
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 71
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 45
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:NHibernate.HibernateException: The dialect was unable to perform paging of a statement that requires distinct results, and is ordered by a column that is not included in the result set of the query.
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.BuildFromClauseForPagingDistinctQuery(MsSqlSelectParser sqlQuery, SqlStringBuilder result)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageByLimitAndOffset(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageBy(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005Dialect.GetLimitString(SqlString queryString, SqlString offset, SqlString limit)
+   at NHibernate.Dialect.Dialect.GetLimitString(SqlString queryString, Nullable`1 offset, Nullable`1 limit, Parameter offsetParameter, Parameter limitParameter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.GetSqlStringWithLimitsIfNeeded(QueryWriter queryWriter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.EndQuery()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.selectStatement()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.statement()
+   at NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator.Generate()
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.DoCompile(IDictionary`2 replacements, Boolean shallow, String collectionRole)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, IASTNode ast, String queryIdentifier, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan.CreateTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan..ctor(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryPlanCache.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters)
+   at NHibernate.Impl.AbstractSessionImpl.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow)
+   at NHibernate.Impl.AbstractSessionImpl.CreateQuery(IQueryExpression queryExpression)
+   at NHibernate.Linq.DefaultQueryProvider.PrepareQuery(Expression expression, IQuery& query)
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteList[TResult](Expression expression)
+   at NHibernate.Linq.NhQueryable`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ProjectBase.Data.BaseNHibernateLinqDaoWithTypedId`2.GetProjectionByQuery[TResult](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, SortStruc`1[] sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Data\BaseNHibernateLinqDao.cs:line 148
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 345
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 71
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 45
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+The dialect was unable to perform paging of a statement that requires distinct results, and is ordered by a column that is not included in the result set of the query.
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/30 10:45:18
+StackTrace:   at NHibernate.Dialect.MsSql2005DialectQueryPager.BuildFromClauseForPagingDistinctQuery(MsSqlSelectParser sqlQuery, SqlStringBuilder result)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageByLimitAndOffset(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageBy(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005Dialect.GetLimitString(SqlString queryString, SqlString offset, SqlString limit)
+   at NHibernate.Dialect.Dialect.GetLimitString(SqlString queryString, Nullable`1 offset, Nullable`1 limit, Parameter offsetParameter, Parameter limitParameter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.GetSqlStringWithLimitsIfNeeded(QueryWriter queryWriter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.EndQuery()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.selectStatement()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.statement()
+   at NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator.Generate()
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.DoCompile(IDictionary`2 replacements, Boolean shallow, String collectionRole)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, IASTNode ast, String queryIdentifier, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan.CreateTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan..ctor(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryPlanCache.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters)
+   at NHibernate.Impl.AbstractSessionImpl.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow)
+   at NHibernate.Impl.AbstractSessionImpl.CreateQuery(IQueryExpression queryExpression)
+   at NHibernate.Linq.DefaultQueryProvider.PrepareQuery(Expression expression, IQuery& query)
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteList[TResult](Expression expression)
+   at NHibernate.Linq.NhQueryable`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ProjectBase.Data.BaseNHibernateLinqDaoWithTypedId`2.GetProjectionByQuery[TResult](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, SortStruc`1[] sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Data\BaseNHibernateLinqDao.cs:line 148
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 345
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 71
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 45
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:NHibernate.HibernateException: The dialect was unable to perform paging of a statement that requires distinct results, and is ordered by a column that is not included in the result set of the query.
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.BuildFromClauseForPagingDistinctQuery(MsSqlSelectParser sqlQuery, SqlStringBuilder result)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageByLimitAndOffset(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005DialectQueryPager.PageBy(SqlString offset, SqlString limit)
+   at NHibernate.Dialect.MsSql2005Dialect.GetLimitString(SqlString queryString, SqlString offset, SqlString limit)
+   at NHibernate.Dialect.Dialect.GetLimitString(SqlString queryString, Nullable`1 offset, Nullable`1 limit, Parameter offsetParameter, Parameter limitParameter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.GetSqlStringWithLimitsIfNeeded(QueryWriter queryWriter)
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.EndQuery()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.selectStatement()
+   at NHibernate.Hql.Ast.ANTLR.SqlGenerator.statement()
+   at NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator.Generate()
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.DoCompile(IDictionary`2 replacements, Boolean shallow, String collectionRole)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, IASTNode ast, String queryIdentifier, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory.CreateQueryTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 filters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan.CreateTranslators(IQueryExpression queryExpression, String collectionRole, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryExpressionPlan..ctor(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters, ISessionFactoryImplementor factory)
+   at NHibernate.Engine.Query.QueryPlanCache.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow, IDictionary`2 enabledFilters)
+   at NHibernate.Impl.AbstractSessionImpl.GetHQLQueryPlan(IQueryExpression queryExpression, Boolean shallow)
+   at NHibernate.Impl.AbstractSessionImpl.CreateQuery(IQueryExpression queryExpression)
+   at NHibernate.Linq.DefaultQueryProvider.PrepareQuery(Expression expression, IQuery& query)
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteList[TResult](Expression expression)
+   at NHibernate.Linq.NhQueryable`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ProjectBase.Data.BaseNHibernateLinqDaoWithTypedId`2.GetProjectionByQuery[TResult](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, SortStruc`1[] sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Data\BaseNHibernateLinqDao.cs:line 148
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoListInternal[TDto](Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap, Func`2 queryBuilderInterceptor) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 345
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList2[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, IDictionary`2 selectorMap) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 332
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDtoList[TDto](Func`2 queryBuilderInterceptor, Pager pager, Expression`1 where, String sort, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 284
+   at ESC5.Web.Mvc.TR.CustomerController.GetResultList(SearchInput input) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 71
+   at ESC5.Web.Mvc.TR.CustomerController.List() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 45
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+The dialect was unable to perform paging of a statement that requires distinct results, and is ordered by a column that is not included in the result set of the query.
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/30 13:20:35
+StackTrace:   at ProjectBase.Web.Mvc.BaseController.AjaxJson(Object model, Boolean genFormToken, Boolean allowAnonymousModelClass) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\BaseController.cs:line 88
+   at ProjectBase.Web.Mvc.BaseController.ForViewWithViewNameInternal(String viewName, Object model, Boolean genFormToken, Boolean allowAnonymousModelClass) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\BaseController.cs:line 171
+   at ProjectBase.Web.Mvc.BaseController.ForView(Object model, Boolean genFormToken) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\BaseController.cs:line 135
+   at ESC5.Web.Mvc.TR.Task_InfoController.SectionedInfo(Int32 Id) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\Task\Task_InfoController.cs:line 170
+   at lambda_method218(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at ProjectBase.Web.Mvc.BaseController.AjaxJson(Object model, Boolean genFormToken, Boolean allowAnonymousModelClass) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\BaseController.cs:line 88
+   at ProjectBase.Web.Mvc.BaseController.ForViewWithViewNameInternal(String viewName, Object model, Boolean genFormToken, Boolean allowAnonymousModelClass) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\BaseController.cs:line 171
+   at ProjectBase.Web.Mvc.BaseController.ForView(Object model, Boolean genFormToken) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\Web.Mvc\BaseController.cs:line 135
+   at ESC5.Web.Mvc.TR.Task_InfoController.SectionedInfo(Int32 Id) in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\Task\Task_InfoController.cs:line 170
+   at lambda_method218(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Object reference not set to an instance of an object.
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/30 15:03:28
+StackTrace:   at ProjectBase.BusinessDelegate.CommonReader`2.GetDto[TDto](Expression`1 where, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 219
+   at ESC5.Web.Mvc.TR.CustomerController.SectionedInfo() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 241
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Exception: 查询到的记录不唯一
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDto[TDto](Expression`1 where, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 219
+   at ESC5.Web.Mvc.TR.CustomerController.SectionedInfo() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 241
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+查询到的记录不唯一
+----------------------------------
+Source:BaseController.OnException
+Time:2023/3/30 15:03:59
+StackTrace:   at ProjectBase.BusinessDelegate.CommonReader`2.GetDto[TDto](Expression`1 where, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 219
+   at ESC5.Web.Mvc.TR.CustomerController.SectionedInfo() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 241
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+Message:System.Exception: 查询到的记录不唯一
+   at ProjectBase.BusinessDelegate.CommonReader`2.GetDto[TDto](Expression`1 where, Expression`1 selector) in C:\Project\Train\branches\Train_Gsq\BaseLibs\ProjectBase\BusinessDelegate\CommonReader.cs:line 219
+   at ESC5.Web.Mvc.TR.CustomerController.SectionedInfo() in C:\Project\Train\branches\Train_Gsq\ESC5.Web.Mvc\TR\CustomerController.cs:line 241
+   at lambda_method109(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+查询到的记录不唯一
+----------------------------------

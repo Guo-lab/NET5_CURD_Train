@@ -458,3 +458,5 @@ C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\
 C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\Edit.cshtml.g.cs
 C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\ListByDate.cshtml.g.cs
 C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\ListApproved.cshtml.g.cs
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\MultiEdit.cshtml.g.cs
+C:\Project\Train\branches\Train_Gsq\ESC5.Web\obj\Debug\net5.0\Razor\TR\Customer\SectionedInfo.cshtml.g.cs

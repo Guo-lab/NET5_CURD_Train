@@ -15,6 +15,8 @@ using ProjectBase.Dto;
 using ProjectBase.Domain; // DORef 
 using System.Linq.Expressions;
 
+using System.Diagnostics;
+
 
 
 namespace ESC5.Common.ViewModel.TR
@@ -68,7 +70,13 @@ namespace ESC5.Common.ViewModel.TR
             public Customer.RankEnum Vip { get; set; }
             public bool Active { get; set; }
 
+            public string OtherGender { get; set; }
 
+            // Add this SelectorMap, Search, field should be mapped
+            public static IDictionary<string, Expression<Func<Customer, object?>>>
+                SelectorMap = new Dictionary<string, Expression<Func<Customer, object?>>> {
+                {  nameof(Name_), o=>o.Name_.Substring(0,7) },
+            };
         }
     }
 
@@ -87,7 +95,7 @@ namespace ESC5.Common.ViewModel.TR
 
 
         [DisplayName("Customer")]
-        public class EditInput
+        public class EditInput : ValidatableObject, IValidateWhen // Global and Local
         {
             public int Id { get; set; }
 
@@ -96,18 +104,19 @@ namespace ESC5.Common.ViewModel.TR
             [StringLength(10)]
             public string Name_ { get; set; }
 
-
             // -------- DORef ---------
             public DORef<User, int>? User { get; set; }
 
-
+            
             [VmInner(nameof(ValGender))] // public bool Val later
+            [ValidateWhen]
             public int Gender { get; set; }
 
 
-            //[Max("2099-03-01")]
-            //[VmInner(nameof(ValDate))]
+            [Max("2099-03-01")]
+            [VmInner(nameof(ValDate))]
             public DateTime? RegisterDate { get; set; }
+            
             public decimal Spending { get; set; }
 
             // ------------ Enum Fail -> OK -------------
@@ -116,16 +125,45 @@ namespace ESC5.Common.ViewModel.TR
             public bool Active { get; set; }
 
 
+            [Required(Groups = "More")]
+            public string? OtherGender { get; set; }
 
+            
 
             public bool ValGender()
             {
                 return Gender > -1;
             }
-            //public bool ValDate()
-            //{
+            public bool ValDate()
+            {
+                if (RegisterDate != null)
+                {
+                    var day = RegisterDate?.DayOfWeek;
+                    Debug.WriteLine(day, "RegisterDate Validation");
+                    return day != DayOfWeek.Sunday;
+                }
+                Debug.WriteLine(RegisterDate);
+                return RegisterDate == null;
+            }
 
-            //}
+
+            // Groups: _A, _D, More
+            public string? ShouldValidateGroups()
+            {
+                if (Gender > 1)
+                {
+                    return "More,_D";
+                }
+                return null;
+            }
+            // Global
+            public override string? Validate()
+            {
+                if (Email.Length + Name_.Length > Spending && !Active && RegisterDate <= DateTime.Now.AddDays(-9)) 
+                    return "FormData_invalid";
+                return null;
+            }
+
         }
     }
 

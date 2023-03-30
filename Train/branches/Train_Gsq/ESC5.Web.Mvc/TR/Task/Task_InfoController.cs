@@ -56,7 +56,9 @@ namespace ESC5.Web.Mvc.TR
                 filter,//,
                 ""//input.ListInput.OrderExpression
             ); 
-            list.MergeList(new List<string> { "aaa", "bbb" },(src,tar)=>src.StartsWith("a"));
+            list.MergeList(new List<string> { "aaa", "bbb" },(src,tar) => src.StartsWith("a"));
+            // TaskDB -> DTO List.MergeList get new 
+            // System.Collections.Generic.List`1[System.String]
             return list;
         }
 
@@ -79,6 +81,7 @@ namespace ESC5.Web.Mvc.TR
             var m = CreateTaskEditVM();
             //m.Input = Map(TaskBD.Get(Id), m.Input); 取出DO后Map，性能较差
             //m.Input = TaskBD.GetDto<TaskEditVM.EditInput>(o => o.Id == Id);自己写where，性能提高，稍微麻烦，但可以返回null
+            // DTO Search
             m.Input = TaskBD.GetDto<TaskEditVM.EditInput>(Id); //最简单，性能提高，与Get(Id)一样不会返回null而会抛出找不到记录的异常
             return ForView(m);
         }
