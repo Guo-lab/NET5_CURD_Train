@@ -216,9 +216,6 @@
 
    and Mapping VM
 
-   > NHibernate.HibernateException:“The dialect was unable to perform paging of a statement that requires distinct results, and is ordered by a column that is not included in the result set of the query.”
-   >
-
    对于 View Model 的 DTO 查询的理解，在 View Model 中设置的字段，与查询 VM 中的字段名一致，如果不一致，需要SelectorMap 映射出新的名称
 
    ```cs
@@ -281,3 +278,11 @@
    多行验证，保存返回提示·字段 required· 在调试 F12 网络上看到Save包证明客户端验证通过，问题在于服务端，发现
 
    网络 > 负载里面，因为 `NgCheckBoxFor` 的使用出现冗余列，暂时无法解决
+
+
+10. Debug: 小心 GetDto 查询结果不唯一
+11. Debug
+   > NHibernate.HibernateException:“The dialect was unable to perform paging of a statement that requires distinct results, and is ordered by a column that is not included in the result set of the query.”
+   >
+   问题在于 VM 中的 Selector Map 有问题
+ 

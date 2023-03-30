@@ -73,10 +73,11 @@ namespace ESC5.Common.ViewModel.TR
             public string OtherGender { get; set; }
 
             // Add this SelectorMap, Search, field should be mapped
-            public static IDictionary<string, Expression<Func<Customer, object?>>>
-                SelectorMap = new Dictionary<string, Expression<Func<Customer, object?>>> {
-                {  nameof(Name_), o=>o.Name_.Substring(0,7) },
-            };
+
+            //public static IDictionary<string, Expression<Func<Customer, object?>>>
+            //    SelectorMap = new Dictionary<string, Expression<Func<Customer, object?>>> {
+            //    {  nameof(Name_), o=>o.Name_.Substring(0,7) },
+            //};
         }
     }
 
